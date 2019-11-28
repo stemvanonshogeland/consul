@@ -1,5 +1,259 @@
-// Overrides and adds customized styles in this file
-// Read more on documentation:
-// * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
-// * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
+// 01. Global styles
+// 02. Header
+// 03. Footer
+// 04. Social
+// 05. Homepage
+// 06. Budgets
+//
+
+
+// 01. Global styles
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.button {
+  background-color: #1779ba;
+
+  &.expanded {
+    background-color: #554866 !important;
+    color: #fff !important;
+  }
+
+  &.hollow {
+    border: 1px solid #bfbfbf !important;
+  }
+}
+
+.recommendations {
+  color: #fff !important;
+}
+
+.jumbo {
+
+  &.highlight {
+    background-color: #fff;
+  }
+
+  h1 {
+    color: #554866 !important;
+
+    &::after {
+      border-bottom: 4px solid #259e8e;
+      content: "";
+      display: block;
+      width: $line-height * 10;
+    }
+  }
+
+  a.button {
+    background-color: #554866;
+    color: #fff;
+  }
+
+  .row {
+
+    h1 {
+      color: #554866;
+    }
+
+    p {
+      color: #fcd02f;
+    }
+  }
+}
+
+// 02. Header
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.subnavigation li a {
+  background-color: #fff;
+  border-bottom: 2px solid transparent;
+  color: $brand;
+}
+
+.menu {
+
+  &.simple h2,
+  &.simple h2 a {
+    color: #554866 !important;
+  }
+}
+
+.menu-icon {
+  background-color: #554866 !important;
+
+  &.dark {
+    width: 40px !important;
+    height: 21px !important;
+  }
+}
+
+header {
+  background: #fff;
+  border-bottom: 3px solid #554866;
+}
+
+.background-header {
+  display: none;
+}
+
+.top-bar {
+  background-color: #fff !important;
+  color: #554866 !important;
+  height: 110px !important;
+}
+
+.top-bar .menu > li a {
+  background-color: #fff !important;
+  color: $brand-secondary !important;
+}
+
+.top-bar .top-bar-title a img {
+  height: 100px !important;
+  margin: 5px !important;
+}
+
+.top-links {
+  background-color: $brand !important;
+}
+
+// 02. Footer
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+footer {
+  color: #fff;
+
+  a,
+  a:active,
+  a:focus {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+
+.social {
+
+  a:hover {
+    color: #fff;
+  }
+}
+
+.footer {
+  background: $brand;
+
+  p {
+    color: #fff;
+  }
+}
+
+.background-header {
+  -webkit-clip-path: ellipse(0%) !important;
+  clip-path: ellipse(0%) !important;
+}
+
+.quiz-next {
+  font-size: 1.3rem !important;
+}
+
+.auth-image {
+  background-color: #fff;
+  border-right: 3px solid #554866;
+  border-top: 15px solid $brand;
+  background-image: none;
+  @include breakpoint(small)
+}
+
+.gradient,
+.budget-investment-show figure figcaption,
+#categories-cloud,
+#tag-cloud,
+#map-block,
+#retired-proposals,
+#proposal-code,
+#investment_code {
+  background: none !important;
+}
+
+// 04. Social
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.button {
+
+  &.button-google_oauth2 {
+    background: #fcedea;
+    border-left: 3px solid #de4c34;
+    color: $text;
+    font-weight: bold;
+    height: $line-height * 2;
+    line-height: $line-height * 2;
+    padding: 0;
+    position: relative;
+
+    &::before {
+      color: #de4c34;
+      content: "\f1a0";
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Font Awesome 5 Brands" !important;
+      font-size: rem-calc(24);
+      left: -12px;
+      line-height: $line-height * 2;
+      padding: 0 rem-calc(20);
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+// 05. Homepage
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.home-page h3 {
+
+  &.title {
+    border-bottom: 0;
+  }
+}
+
+// 06. Homepage
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.expanded {
+
+  &.budget {
+    background: none;
+
+    .row {
+      background: $budget;
+    }
+
+    .info {
+      background: #259e8e;
+    }
+  }
+}
+
+.help-header {
+  background: none;
+  border-bottom: 0;
+  padding-top: $line-height;
+
+  h1 {
+    line-height: $line-height * 2;
+  }
+}
+
+.budgets-stats .header {
+  background: #554866;
+  color: #fff;
+}
+
+.budgets-stats .header a,
+.budgets-stats .header .icon-angle-left {
+  color: #fff;
+}

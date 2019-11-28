@@ -1,0 +1,14 @@
+nl:
+  admin:
+    tags:
+      create: "Creëer onderwerp"
+    spending_proposals:
+      index:
+        feasibility:
+          feasible: "Haalbaar (%{price})"
+          not_feasible: Niet haalbaar
+        filters:
+          price: Prijs
+    budget_investments:
+      feasibility:
+        feasible: "Haalbaar"

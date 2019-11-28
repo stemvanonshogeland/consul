@@ -219,7 +219,11 @@ shared_examples "nested imageable" do |imageable_factory_name, path,
         # Pending. Review soon and test
       else
         expect(page).to have_selector "figure img"
-        expect(page).to have_selector "figure figcaption"
+
+        # Remove figcaption with image title in custom budget investment
+        unless imageable_factory_name == "budget_investment"
+          expect(page).to have_selector "figure figcaption"
+        end
       end
     end
 

@@ -1,0 +1,59 @@
+nl:
+  budgets:
+    ballots:
+      show:
+        amount_spent: Uitgegeven
+        no_balloted_group_yet: U hebt nog niet gestemd op deze groep, stem nu!
+        remaining: U heeft nog <span>%{amount}</span> te spenderen.
+        remove: Verwijder keuze
+        title: Uw keuze
+        voted_html:
+          one: Je hebt op <span>één</span> idee gestemd.
+          other: Je hebt op <span>%{count}</span> ideeën gestemd.
+        voted_info_html: Uw stem is bevestigd!
+        voted_info_2: U kunt uw stem wijzigen tot de sluiting van deze fase.<br> U hoeft niet het héle bedrag uit te geven.
+        zero: Je hebt op geen enkel idee gestemd.
+    index:
+      title: Budgetten
+      section_header:
+        title: Ideeën
+      map: Ideeën op de kaart
+      unfeasible_investment_proyects: Ideeën waar niet op gestemd kan worden
+      investment_proyects: Lijst van alle gekozen ideeën
+      not_selected_investment_proyects: Niet voor stemmen geselecteerde ideeën bekijken
+      see_results: Bekijk de uitslag
+    investments:
+      index:
+        sidebar:
+          by_feasibility: Op haalbaarheid
+          change_ballot: Als u zich bedenkt kunt uw uw stemmen in %{check_ballot} verwijderen opnieuw beginnen.
+          check_ballot_link: check mijn stemming
+          create: Nieuw idee maken
+          different_heading_assigned_html: 'Je hebt al gestemd al op een ander deel van het budget: %{heading_link}'
+          feasible: Haalbare budgetten ideeën
+          my_ballot: Mijn stemmen
+          not_logged_in: Om een idee in te dienen moet je %{sign_in} of %{sign_up}.s
+          sign_in: aanmelden
+          sign_up: registreren
+          unfeasible: Onhaalbare ideeën
+          verified_only: "%{verify} je account om een idee in te dienen."
+          verify_account: je account verifieren
+          voted_html:
+            one: "<strong>U heeft gestemd op een idee dat %{amount_spent} kost</strong>"
+            other: "<strong>U heeft gestemd op %{count} ideeën met een prijs van %{amount_spent}</strong>"
+      form:
+        edit_permission: "Je moet zelf het idee hebben ingediend om het te kunnen bewerken."
+        updated_notice: "Je idee is aangepast."
+      show:
+        comments_tab: Reacties
+    phase:
+      finished: De uitslag
+    results:
+      link: De uitslag
+      investment_title: Idee
+      ballot_lines_count: Stemmen
+      investment_proyects: Lijst van alle gekozen ideeën
+      unfeasible_investment_proyects: Lijst van alle gekozen ideeën
+      not_selected_investment_proyects: Lijst van alle ideeën niet geselecteerd voor stemming
+    show:
+      see_results: Bekijk de uitslag

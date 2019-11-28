@@ -89,6 +89,7 @@ describe "Stats" do
     end
 
     scenario "Level 2 user Graph" do
+      skip "No verification sms used"
       create(:geozone)
       visit account_path
       click_link "Verify my account"

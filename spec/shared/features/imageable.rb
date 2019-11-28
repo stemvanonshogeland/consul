@@ -33,7 +33,10 @@ shared_examples "imageable" do |imageable_factory_name, imageable_path, imageabl
 
       visit send(imageable_path, imageable_arguments)
 
-      expect(page).to have_content image.title
+      # Remove image title in custom budget investment
+      unless image.imageable_type == "Budget::Investment"
+        expect(page).to have_content image.title
+      end
     end
 
   end

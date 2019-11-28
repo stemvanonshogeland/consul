@@ -21,6 +21,7 @@ describe "Tracking" do
     end
 
     scenario "Usertype level_2_user" do
+      skip "No verification sms used"
       create(:geozone)
       user = create(:user)
       login_as(user)
@@ -54,6 +55,7 @@ describe "Tracking" do
     end
 
     scenario "Verification: success census & start sms" do
+      skip "No verification sms used"
       create(:geozone)
       user = create(:user)
       login_as(user)
@@ -71,6 +73,7 @@ describe "Tracking" do
     end
 
     scenario "Verification: success sms" do
+      skip "No verification sms used"
       create(:geozone)
       user = create(:user)
       login_as(user)
@@ -92,6 +95,7 @@ describe "Tracking" do
     end
 
     scenario "Verification: letter" do
+      skip "No verification letter used"
       create(:geozone)
       user = create(:user)
       login_as(user)

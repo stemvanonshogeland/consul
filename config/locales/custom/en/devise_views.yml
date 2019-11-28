@@ -1,0 +1,6 @@
+en:
+  devise_views:
+    mailer:
+      confirmation_instructions:
+        confirm_link: Click on %{link} to complete the registration of your account.
+        link: Confirm my account

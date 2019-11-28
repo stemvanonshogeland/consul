@@ -1,0 +1,32 @@
+nl:
+  legislation:
+    annotations:
+      comments:
+        cancel: Annuleren
+        publish_comment: Publiceer reactie
+      index:
+        title: Reacties
+    processes:
+      debate:
+        participate: Neem deel aan discussies
+        icon_alt: Plannen icoon
+        help: Help
+        section_footer:
+          title: Over plannen
+          description: Help mee met het beoordelen en schrijven van plannen voorafgaand aan de totstandkoming van verordeningen, beleid en uitvoering. Jouw mening telt en heeft invloed.
+      phase_empty:
+        empty: Nog niets gepubliceerd
+      process:
+        see_latest_comments: BBekijk de vragen
+        see_latest_comments_title: Bekijk de vragen
+    proposals:
+      form:
+        tags_label: Categorieën
+      not_verified: Voor stemvoorstellen %{verify_account}.
+      participation:
+          debate_phase_not_open: De discussie is gesloten en reacties worden niet meer geaccepteerd.
+          organizations: Deelname van organisaties in discussies is niet toegestaan
+          unauthenticated: Je dient %{signin} of %{signup} om deel te nemen.
+    questions:
+      question:
+        debate: Vraag
