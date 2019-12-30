@@ -109,7 +109,7 @@
                 <small><%= t("budgets.index.unfeasible_investment_proyects") %></small>
               <% end %>
             </li>
-            <% if show_links %>
+            <% if show_unselected_link_to_budget_investments(current_budget) %>
               <li>
                 <%= link_to budget_path(current_budget, filter: "unselected") do %>
                   <small><%= t("budgets.index.not_selected_investment_proyects") %></small>

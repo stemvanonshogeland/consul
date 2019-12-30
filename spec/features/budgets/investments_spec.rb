@@ -611,6 +611,7 @@ describe "Budget Investments" do
       end
 
       scenario "unselected" do
+        skip "Hide unselected link on results phase"
         investment1 = create(:budget_investment, :unselected, heading: heading)
         investment2 = create(:budget_investment, :selected, heading: heading)
 
