@@ -1,0 +1,8 @@
+en:
+  layouts:
+    footer:
+      contact: Contact %{email}
+      email: cooperatieve.wijkraad@groningen.nl
+      groningen: Stem van Groningen
+      groningen_description: This is Groningen's online participation platform. The Coöperatieve Wijkraad uses this platform for 'Always a good idea'.
+      questions: Questions?

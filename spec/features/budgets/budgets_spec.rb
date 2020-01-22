@@ -47,7 +47,7 @@ describe "Budgets" do
         expect(page).to have_content(budget.description)
         expect(page).to have_content("Actual phase")
         expect(page).to have_content("Information")
-        expect(page).to have_link("Help with participatory budgets")
+        #expect(page).to have_link("Help with participatory budgets")
         expect(page).to have_link("See all phases")
       end
 
@@ -149,8 +149,8 @@ describe "Budgets" do
         expect(page).to have_link "List of all unfeasible investment projects",
                                    href: budget_path(budget, filter: "unfeasible")
 
-        expect(page).to have_link "List of all investment projects not selected for balloting",
-                                   href: budget_path(budget, filter: "unselected")
+        expect(page).not_to have_link "List of all investment projects not selected for balloting",
+                                      href: budget_path(budget, filter: "unselected")
 
         expect(page).to have_css("div.map")
       end
@@ -169,7 +169,9 @@ describe "Budgets" do
 
         expect(page).to have_content(I18n.t("budgets.index.investment_proyects"))
         expect(page).to have_content(I18n.t("budgets.index.unfeasible_investment_proyects"))
-        expect(page).to have_content(I18n.t("budgets.index.not_selected_investment_proyects"))
+        unless budget.phase == "finished"
+          expect(page).to have_content(I18n.t("budgets.index.not_selected_investment_proyects"))
+        end
       end
     end
 
@@ -190,7 +192,9 @@ describe "Budgets" do
 
         expect(page).not_to have_content(I18n.t("budgets.index.investment_proyects"))
         expect(page).to have_content(I18n.t("budgets.index.unfeasible_investment_proyects"))
-        expect(page).not_to have_content(I18n.t("budgets.index.not_selected_investment_proyects"))
+        unless budget.phase == "finished"
+          expect(page).not_to have_content(I18n.t("budgets.index.not_selected_investment_proyects"))
+        end
       end
     end
 

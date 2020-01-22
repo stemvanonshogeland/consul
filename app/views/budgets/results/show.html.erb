@@ -1,5 +1,7 @@
 <% provide :title, t("budgets.results.page_title", budget: @budget.name) %>
-<% content_for :meta_description do %><%= @budget.description_for_phase("finished") %><% end %>
+<% content_for :meta_description do %>
+  <%= ActionView::Base.full_sanitizer.sanitize(@budget.description_for_phase("finished")) %>
+<% end %>
 <% provide :social_media_meta_tags do %>
 <%= render "shared/social_media_meta_tags",
             social_url: budget_results_url(@budget),
@@ -67,8 +69,10 @@
       <%= link_to budget_path(@budget, filter: "unfeasible") do %>
         <small><%= t("budgets.results.unfeasible_investment_proyects") %></small>
       <% end %><br>
-      <%= link_to budget_path(@budget, filter: "unselected") do %>
-        <small><%= t("budgets.results.not_selected_investment_proyects") %></small>
+      <% if show_unselected_link_to_budget_investments(@budget) %>
+        <%= link_to budget_path(@budget, filter: "unselected") do %>
+          <small><%= t("budgets.results.not_selected_investment_proyects") %></small>
+        <% end %>
       <% end %>
     </p>
   </div>

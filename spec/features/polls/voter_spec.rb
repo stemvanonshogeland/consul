@@ -197,6 +197,7 @@ describe "Voter" do
     end
 
     scenario "Voting in poll and then verifiying account", :js do
+      Zipcode.create!(code: "28013")
       user = create(:user)
 
       login_through_form_as_officer(officer.user)
@@ -210,7 +211,7 @@ describe "Voter" do
       click_link "Verify my account"
 
       verify_residence
-      confirm_phone(user)
+      #confirm_phone(user)
 
       visit poll_path(poll)
 

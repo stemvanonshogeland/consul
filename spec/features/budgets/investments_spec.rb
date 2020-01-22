@@ -611,6 +611,7 @@ describe "Budget Investments" do
       end
 
       scenario "unselected" do
+        skip "Hide unselected link on results phase"
         investment1 = create(:budget_investment, :unselected, heading: heading)
         investment2 = create(:budget_investment, :selected, heading: heading)
 
@@ -1017,9 +1018,9 @@ describe "Budget Investments" do
     expect(page).to have_content(investment.description)
     expect(page).to have_content(investment.author.name)
     expect(page).to have_content(investment.heading.name)
-    within("#investment_code") do
-      expect(page).to have_content(investment.id)
-    end
+    # within("#investment_code") do
+    #   expect(page).to have_content(investment.id)
+    # end
   end
 
   context "Show Investment's price & cost explanation" do
@@ -1254,7 +1255,7 @@ describe "Budget Investments" do
 
     visit budget_investment_path(budget, id: investment.id)
 
-    within("aside") do
+    within("#sidebar") do
       expect(page).to have_content("Investment project")
       expect(page).to have_css(".label-budget-investment")
     end
@@ -1434,7 +1435,7 @@ describe "Budget Investments" do
       investment = create(:budget_investment, budget: budget)
       visit budget_investment_path(budget, investment)
 
-      within("aside") do
+      within("#sidebar") do
         expect(page).to have_content "Supports"
       end
     end
@@ -1453,7 +1454,7 @@ describe "Budget Investments" do
 
       visit budget_investment_path(budget, investment)
 
-      within("aside") do
+      within("#sidebar") do
         expect(page).to have_content "Supports"
         expect(page).to have_content "1 support"
       end
@@ -1571,7 +1572,7 @@ describe "Budget Investments" do
       investment = create(:budget_investment, :selected, budget: budget)
       visit budget_investment_path(budget, investment)
 
-      within("aside") do
+      within("#sidebar") do
         expect(page).to have_content "Votes"
       end
     end

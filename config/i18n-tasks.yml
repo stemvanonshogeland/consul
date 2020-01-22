@@ -211,6 +211,13 @@ ignore_unused:
   - landings.cambia_tu_ciudad.*
   - "seeds.settings.*"
   - "dashboard.polls.*.submit"
+  # Ignore missing by custom content
+  - "budgets.executions.link"
+  - "budgets.index.section_footer.description"
+  - "budgets.index.section_footer.title"
+  - "budgets.investments.show.code_html"
+  - "mailers.budget_investment_unfeasible.sorry"
+  - "stats.budgets.link"
 ####
 ## Exclude these keys from the `i18n-tasks eq-base" report:
 # ignore_eq_base:

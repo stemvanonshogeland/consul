@@ -34,11 +34,10 @@
 
         <br>
 
-        <%= render_image(investment.image, :large, true) if investment.image.present? %>
+        <%= render_image(investment.image, :large, false) if investment.image.present? %>
 
-        <p id="investment_code">
-          <%= t("budgets.investments.show.code_html", code: investment.id) %>
-        </p>
+        <div class="clear"></div>
+        <hr>
 
         <%= safe_html_with_links investment.description.html_safe %>
 
@@ -93,18 +92,27 @@
         </div>
       </div>
 
-      <aside class="small-12 medium-3 column">
-        <% if can_destroy_image?(investment) %>
+      <div id="sidebar" class="small-12 medium-3 column">
+        <% if can_destroy_image?(investment) || can?(:edit, investment) %>
           <div class="sidebar-divider"></div>
-          <h2><%= t("budgets.investments.show.author") %></h2>
+          <p class="sidebar-title"><%= t("budgets.investments.show.author") %></p>
+        <% end %>
+
+        <% if can_destroy_image?(investment) %>
           <div class="show-actions-menu">
             <%= link_to image_path(investment.image, from: request.url),
                         method: :delete,
-                        class: "button hollow alert expanded" do %>
+                        class: 'button hollow alert expanded' do %>
                 <span class="icon-image"></span>
                 <%= t("images.remove_image") %>
             <% end %>
           </div>
+        <% end %>
+
+        <% if can?(:edit, investment) %>
+         <%= link_to t("shared.edit"),
+                     edit_budget_investment_path(investment.budget, investment),
+                     method: :get, class: "button hollow expanded" %>
         <% end %>
 
         <% if investment.should_show_aside? %>
@@ -173,7 +181,7 @@
         <% end %>
         <% if investment.should_show_price? %>
           <div class="sidebar-divider"></div>
-          <h2><%= t("budgets.investments.show.price") %></h2>
+          <p class="sidebar-title"><%= t("budgets.investments.show.price") %></p>
           <div class="supports text-center">
             <p class="investment-project-amount">
               <%= investment.formatted_price %>
@@ -208,7 +216,7 @@
 
         <%= render "communities/access_button", community: investment.community %>
 
-       </aside>
+       </div>
     </div>
   </section>
 <% end %>

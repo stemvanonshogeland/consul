@@ -1,0 +1,87 @@
+nl:
+  account:
+    show:
+      change_credentials_link: Inloggegevens aanpassen
+      email_on_comment_label: Stuur me een email als iemand op mijn voorstel of discussie reageert
+      email_on_comment_reply_label: Stuur me een email wanneer iemand op mijn voorstel reageert
+      email_digest_label: Stuur me een samenvatting van meldingen met betrekking tot voorstellen
+      email_on_direct_message_label: Stuur me een mail als ik een privébericht krijg
+      subscription_to_website_newsletter_label: Stuur me een email met relevante informatie over de website
+      public_activity_label: Mijn activiteit is publiek
+      title: Mijn gegevens
+      user_permission_debates: Meedoen met discussies
+      user_permission_info: Met jouw account kun je...
+      user_permission_proposal: Nieuwe voorstellen inbrengen
+      user_permission_support_proposal: Op voorstellen stemmen
+      user_permission_verify_info: "* Alleen voor inwoners in het gebied."
+      user_permission_votes: Deelnemen aan de definitieve stemronde
+      save_changes_submit: Wijzigingen opslaan
+  shared:
+    back: Ga terug
+    view_mode:
+      cards: Overzicht
+      title: Weergave
+    suggest:
+      budget_investment:
+        message: "%{limit} van %{count} voorstellen met de term '%{query}'"
+    print:
+      print_button: Afdrukken
+  layouts:
+    header:
+      budgets: "Ideeën"
+      my_account_link: Mijn gegevens
+      my_activity_link: Mijn bijdragen
+    footer:
+      contact: Neem contact op met %{email}
+      email: cooperatieve.wijkraad@groningen.nl
+      groningen: Stem van Groningen
+      groningen_description: Dit is het online participatieplatform van Groningen. De Coöperatieve Wijkraad gebruikt dit platform voor 'Altijd een goed idee'
+      questions: Vragen?
+      privacy: Privacy verklaring
+  welcome:
+    cards:
+      title: Uitgelicht
+  omniauth:
+    facebook:
+      sign_in: Log in via Facebook
+      sign_up: Registreer via Facebook
+      name: Facebook
+    finish_signup:
+      title: "Verdere details"
+      username_warning: "Door een verandering in de manier waarop we met sociale netwerken communiceren, is het mogelijk dat uw gebruikersnaam nu als 'al in gebruik' verschijnt. Kiest u dan een andere gebruikersnaam, aub."
+    google_oauth2:
+      sign_in: Log in via Google
+      sign_up: Registreer met Google
+      name: Google
+    info_sign_in: Aanmelden via sociale media
+    info_sign_up: Registreren via sociale media
+    or_fill: Direct aanmelden
+  proposals:
+    proposal:
+      already_supported: Je hebt dit voorstel al geliked.
+      archived: Dit voorstel is gearchiveerd.
+      share:
+        guide: Nu kun je jouw voorstel delen zodat mensen hun steun kunnen betuigen.
+      successful: Dit voorstel heeft de benodigde likes.
+      support: Like
+      support_title: Steun op dit voorstel
+      supports:
+        one: 1 like
+        other: "%{count} likes"
+        zero: Geen likes
+      supports_necessary: "%{number} likes nodig"
+      retire_form:
+        retired_explanation_label: Reden
+        retired_explanation_placeholder: Geef een reden waarom dit voorstel kan worden ingetrokken
+        retired_reason_blank: Kies één van de redenen
+        retired_reason_label: Reden om het voorstel in te trekken
+        submit_button: Voorstel intrekken
+        title: Voorstel intrekken
+        warning: Als een voorstel is ingetrokken kan het nog wel gesteund worden, maar het wordt niet meer getoond in de overzichten en er wordt een melding getoond waarin wordt aangegeven dat het voorstel is ingetrokken met een verwijzing naar de reden.
+      retire_options:
+        duplicated: Dubbel
+        unfeasible: Niet haalbaar
+      show:
+        retired: Voorstel ingetrokken
+        retired_warning: Dit voorstel is ingetrokken.
+        retired_warning_link_to_explanation: Lees waarom.

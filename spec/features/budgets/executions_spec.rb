@@ -28,6 +28,7 @@ describe "Executions" do
   end
 
   scenario "only displays investments with milestones" do
+    skip "Disabled milestones"
     create(:milestone, milestoneable: investment1)
 
     visit budget_path(budget)
@@ -44,6 +45,7 @@ describe "Executions" do
   end
 
   scenario "Do not display headings with no winning investments for selected status" do
+    skip "Disabled milestones"
     create(:milestone, milestoneable: investment1)
 
     empty_group   = create(:budget_group, budget: budget)
@@ -62,6 +64,7 @@ describe "Executions" do
   end
 
   scenario "Show message when there are no winning investments with the selected status", :js do
+    skip "Disabled milestones"
     create(:milestone_status, name: I18n.t("seeds.budgets.statuses.executed"))
 
     visit budget_path(budget)
@@ -79,6 +82,7 @@ describe "Executions" do
   context "Images" do
 
     scenario "renders milestone image if available" do
+      skip "Disabled milestones"
       milestone1 = create(:milestone, milestoneable: investment1)
       create(:image, imageable: milestone1)
 
@@ -92,6 +96,7 @@ describe "Executions" do
     end
 
     scenario "renders investment image if no milestone image is available" do
+      skip "Disabled milestones"
       create(:milestone, milestoneable: investment2)
       create(:image, imageable: investment2)
 
@@ -105,6 +110,7 @@ describe "Executions" do
     end
 
     scenario "renders default image if no milestone nor investment images are available" do
+      skip "Disabled milestones"
       create(:milestone, milestoneable: investment4)
 
       visit budget_path(budget)
@@ -117,6 +123,7 @@ describe "Executions" do
     end
 
     scenario "renders last milestone's image if investment has multiple milestones with images associated" do
+      skip "Disabled milestones"
       milestone1 = create(:milestone, milestoneable: investment1,
                                       publication_date: Date.yesterday)
 
@@ -149,6 +156,7 @@ describe "Executions" do
     let!(:status2) { create(:milestone_status, name: "Bidding") }
 
     scenario "Filters select with counter are shown" do
+      skip "Disabled milestones"
       create(:milestone, milestoneable: investment1,
                          publication_date: Date.yesterday,
                          status: status1)
@@ -168,6 +176,7 @@ describe "Executions" do
     end
 
     scenario "by milestone status", :js do
+      skip "Disabled milestones"
       create(:milestone, milestoneable: investment1, status: status1)
       create(:milestone, milestoneable: investment2, status: status2)
       create(:milestone_status, name: I18n.t("seeds.budgets.statuses.executing_project"))
@@ -197,6 +206,7 @@ describe "Executions" do
     end
 
     scenario "are based on latest milestone status", :js do
+      skip "Disabled milestones"
       create(:milestone, milestoneable: investment1,
                          publication_date: 1.month.ago,
                          status: status1)
@@ -217,6 +227,7 @@ describe "Executions" do
     end
 
     scenario "milestones with future dates are not shown", :js do
+      skip "Disabled milestones"
       create(:milestone, milestoneable: investment1,
                          publication_date: Date.yesterday,
                          status: status1)
@@ -263,6 +274,7 @@ describe "Executions" do
   context "No milestones" do
 
     scenario "Milestone not yet published" do
+      skip "Disabled milestones"
       status = create(:milestone_status)
       unpublished_milestone = create(:milestone, milestoneable: investment1,
                                      status: status, publication_date: Date.tomorrow)

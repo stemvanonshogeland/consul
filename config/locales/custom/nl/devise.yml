@@ -1,0 +1,8 @@
+nl:
+  devise:
+    mailer:
+      confirmation_instructions:
+        subject: Bevestig je email
+    sessions:
+      signed_in: "U bent aangemeld."
+      signed_out: "U bent afgemeld."

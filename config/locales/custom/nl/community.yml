@@ -1,0 +1,13 @@
+nl:
+  community:
+    show:
+      create_first_community_topic:
+        first_theme: "Creëer het eerste community onderwerp."
+        sub_first_theme: "Om een thema of onderwerp te creëeren moet je %{sign_in} of %{sign_up}."
+    topic:
+      create: "Creëer onderwerp"
+      form:
+        create:
+          submit_button: "Creëer onderwerp"
+        new:
+          submit_button: "Creëer onderwerp"
