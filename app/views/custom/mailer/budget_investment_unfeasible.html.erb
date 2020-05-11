@@ -9,14 +9,15 @@
   </p>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
-    <%= t("mailers.budget_investment_unfeasible.new_html",
+    <%= sanitize(t("mailers.budget_investment_unfeasible.new",
         url: link_to(t("mailers.budget_investment_unfeasible.new_href"),
-        new_budget_investment_url(@investment.budget), style: "color: #2895F1; text-decoration: underline;")) %>
+        new_budget_investment_url(@investment.budget), style: "color: #2895F1; text-decoration: underline;"))) %>
   </p>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
-    <%= t("mailers.budget_investment_unfeasible.contact_html",
-           email: link_to(t("mailers.budget_investment_unfeasible.email"), "mailto:cooperatieve.wijkraad@groningen.nl", style: "color: #2895F1; text-decoration: underline;")) %>
+    <%= sanitize(t("mailers.budget_investment_unfeasible.contact",
+        email: link_to(t("mailers.budget_investment_unfeasible.email"),
+        "mailto:cooperatieve.wijkraad@groningen.nl", style: "color: #2895F1; text-decoration: underline;"))) %>
   </p>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
