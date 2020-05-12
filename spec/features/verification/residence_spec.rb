@@ -35,7 +35,7 @@ describe "Residence" do
     check "residence_terms_of_service"
     click_button "Verify residence"
 
-    expect(page).to have_content "Residence verified"
+    expect(page).to have_content "Your account is already verified"
     Setting["feature.remote_census"] = nil
   end
 
