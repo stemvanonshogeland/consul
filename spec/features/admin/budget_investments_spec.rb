@@ -999,7 +999,10 @@ describe "Admin budget investments" do
 
       visit admin_budget_budget_investments_path(budget_investment.budget)
 
-      click_link budget_investment.title
+      admin_view_path = admin_budget_budget_investment_path(budget_investment.budget, budget_investment)
+      expect(page). to have_link budget_investment.title,
+                                 href: admin_view_path
+      visit admin_view_path
 
       expect(page).to have_content(budget_investment.title)
       expect(page).to have_content(budget_investment.description)
