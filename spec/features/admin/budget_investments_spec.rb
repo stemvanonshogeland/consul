@@ -1009,7 +1009,7 @@ describe "Admin budget investments" do
       expect(page).to have_content(budget_investment.author.name)
       expect(page).to have_content(budget_investment.heading.name)
       expect(page).to have_content("Investment preview")
-      expect(page).to have_content(budget_investment.image.title)
+      expect(page).to have_css("img[alt='#{budget_investment.image.title}']")
       expect(page).to have_content("Documents (1)")
       expect(page).to have_content(document.title)
       expect(page).to have_content("Download file")
