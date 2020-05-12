@@ -121,6 +121,8 @@ ignore_missing:
   - "devise.registrations.destroyed"
   - "devise.password_expired.*"
   - "seeds.settings.*"
+  - "mailers.budget_investment_unfeasible.contact"
+  - "mailers.comment.new_comment_by_html"
 
 ## Consider these keys used:
 ignore_unused:
@@ -218,6 +220,7 @@ ignore_unused:
   - "budgets.investments.show.code_html"
   - "mailers.budget_investment_unfeasible.sorry"
   - "stats.budgets.link"
+  - "budgets.investments.show.code"
 ####
 ## Exclude these keys from the `i18n-tasks eq-base" report:
 # ignore_eq_base:
