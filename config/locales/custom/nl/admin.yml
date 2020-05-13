@@ -1,5 +1,7 @@
 nl:
   admin:
+    actions:
+      hide: "verbergen"
     tags:
       create: "Creëer onderwerp"
     spending_proposals:

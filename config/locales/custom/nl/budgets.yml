@@ -22,13 +22,17 @@ nl:
       investment_proyects: Lijst van alle gekozen ideeën
       not_selected_investment_proyects: Niet voor stemmen geselecteerde ideeën bekijken
       see_results: Bekijk de uitslag
+      finished_budgets: "Afgeronde processen"
     investments:
       index:
+        by_heading: "Ideeën voor %{heading}"
+        orders:
+          confidence_score: "meest populair"
         sidebar:
           by_feasibility: Op haalbaarheid
           change_ballot: Als u zich bedenkt kunt uw uw stemmen in %{check_ballot} verwijderen opnieuw beginnen.
           check_ballot_link: check mijn stemming
-          create: Nieuw idee maken
+          create: "Idee toevoegen"
           different_heading_assigned_html: 'Je hebt al gestemd al op een ander deel van het budget: %{heading_link}'
           feasible: Haalbare budgetten ideeën
           my_ballot: Mijn stemmen
@@ -45,9 +49,19 @@ nl:
         edit_permission: "Je moet zelf het idee hebben ingediend om het te kunnen bewerken."
         updated_notice: "Je idee is aangepast."
       show:
+        author: "auteur"
         comments_tab: Reacties
+        supports: "Steun"
+      investment:
+        give_support: "Like"
+        supports:
+          zero: "nog geen likes"
+          one: "1 like"
+          other: "%{count} likes"
     phase:
       finished: De uitslag
+      selecting: "Stemmen op ideeën"
+      balloting: "Stemmen tellen"
     results:
       link: De uitslag
       investment_title: Idee

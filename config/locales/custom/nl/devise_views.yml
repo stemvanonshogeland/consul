@@ -25,6 +25,11 @@ nl:
           organization_signup: Lees hier de %{signup_link}.
           organization_signup_link: gebruiksvoorwaarden
           submit: Registreren
-          terms: Ik ben een Oosterparker en ik accepteer de gebruiksvoorwaarden.
+          terms: "Ik ben een inwoner van Groningen en ik accepteer de gebruiksvoorwaarden."
           username_label: Gebruikersnaam
           username_note: De opgegeven naam zal zichtbaar zijn voor andere gebruikers
+        success:
+          title: "Bevestig uw mailadres"
+          thank_you_html: "Bedankt voor uw aanmelding."
+          instructions_1_html: "Bevestig uw mailadres via de link die wij u hebben toegestuurd."
+          instructions_2_html: "<strong>Let op</strong>: controleer ook uw spam inbox."
