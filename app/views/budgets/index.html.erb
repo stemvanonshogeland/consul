@@ -76,7 +76,7 @@
                   <% unless current_budget.informing? || current_budget.finished? %>
                     <%= link_to budget_investments_path(current_budget.id,
                                                         heading_id: heading.id) do %>
-                      <%= heading_name_and_price_html(heading, current_budget) %>
+                      <%= t("budgets.index.go_to_ideas") %>
                     <% end %>
                   <% else %>
                     <div class="heading-name">

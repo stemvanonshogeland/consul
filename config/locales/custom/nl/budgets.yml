@@ -23,6 +23,7 @@ nl:
       not_selected_investment_proyects: Niet voor stemmen geselecteerde ideeën bekijken
       see_results: Bekijk de uitslag
       finished_budgets: "Afgeronde processen"
+      go_to_ideas: "Ga naar ideeën"
     investments:
       index:
         by_heading: "Ideeën voor %{heading}"
