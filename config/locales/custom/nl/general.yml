@@ -18,6 +18,7 @@ nl:
       save_changes_submit: Wijzigingen opslaan
   shared:
     back: Ga terug
+    edit: "Aanpassen"
     view_mode:
       cards: Overzicht
       title: Weergave
@@ -33,7 +34,7 @@ nl:
       my_activity_link: Mijn bijdragen
     footer:
       contact: Neem contact op met %{email}
-      email: cooperatieve.wijkraad@groningen.nl
+      email: "destemvan@groningen.nl"
       groningen: Stem van Groningen
       groningen_description: Dit is het online participatieplatform van Groningen. De Coöperatieve Wijkraad gebruikt dit platform voor 'Altijd een goed idee'
       questions: Vragen?
@@ -85,3 +86,16 @@ nl:
         retired: Voorstel ingetrokken
         retired_warning: Dit voorstel is ingetrokken.
         retired_warning_link_to_explanation: Lees waarom.
+  comments:
+    comment:
+      responses_show:
+        one: "1 reactie (tonen)"
+        other: "%{count} reacties (tonen)"
+        zero: "Geen reacties"
+      responses_collapse:
+        one: "1 reactie (verbergen)"
+        other: "%{count} reacties (verbergen)"
+        zero: "Geen reacties"
+  users:
+    show:
+      comments: "Reacties"
