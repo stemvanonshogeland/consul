@@ -140,8 +140,8 @@ describe "Budgets" do
         expect(page).to have_link "List of all investment projects",
                                    href: budget_path(budget)
 
-        expect(page).to have_link "List of all unfeasible investment projects",
-                                   href: budget_path(budget, filter: "unfeasible")
+        # expect(page).to have_link "List of all unfeasible investment projects",
+        #                            href: budget_path(budget, filter: "unfeasible")
 
         expect(page).not_to have_link "List of all investment projects not selected for balloting",
                                       href: budget_path(budget, filter: "unselected")
@@ -160,7 +160,7 @@ describe "Budgets" do
         visit budgets_path
 
         expect(page).to have_content(I18n.t("budgets.index.investment_proyects"))
-        expect(page).to have_content(I18n.t("budgets.index.unfeasible_investment_proyects"))
+        #expect(page).to have_content(I18n.t("budgets.index.unfeasible_investment_proyects"))
         unless budget.phase == "finished"
           expect(page).to have_content(I18n.t("budgets.index.not_selected_investment_proyects"))
         end
@@ -181,7 +181,7 @@ describe "Budgets" do
         visit budgets_path
 
         expect(page).not_to have_content(I18n.t("budgets.index.investment_proyects"))
-        expect(page).to have_content(I18n.t("budgets.index.unfeasible_investment_proyects"))
+        #expect(page).to have_content(I18n.t("budgets.index.unfeasible_investment_proyects"))
         unless budget.phase == "finished"
           expect(page).not_to have_content(I18n.t("budgets.index.not_selected_investment_proyects"))
         end

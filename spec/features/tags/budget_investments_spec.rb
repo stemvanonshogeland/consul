@@ -227,7 +227,7 @@ describe "Tags" do
     let!(:investment2) { create(:budget_investment, heading: heading, tag_list: new_tag) }
     let!(:investment3) { create(:budget_investment, heading: heading, tag_list: newer_tag) }
 
-    scenario "Display user tags" do
+    xscenario "Display user tags" do
       Budget::Phase::PHASE_KINDS.each do |phase|
         budget.update!(phase: phase)
 
@@ -241,7 +241,7 @@ describe "Tags" do
       end
     end
 
-    scenario "Filter by user tags" do
+    xscenario "Filter by user tags" do
       Budget::Phase::PHASE_KINDS.each do |phase|
         budget.update!(phase: phase)
 
@@ -271,7 +271,8 @@ describe "Tags" do
     end
   end
 
-  context "Categories" do
+  xcontext "Categories" do
+
     let!(:investment1) { create(:budget_investment, heading: heading, tag_list: tag_medio_ambiente.name) }
     let!(:investment2) { create(:budget_investment, heading: heading, tag_list: tag_medio_ambiente.name) }
     let!(:investment3) { create(:budget_investment, heading: heading, tag_list: tag_economia.name) }
