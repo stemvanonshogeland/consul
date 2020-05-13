@@ -1516,7 +1516,8 @@ describe "Budget Investments" do
 
       first(:link, "Participatory budgeting").click
 
-      click_link "More hospitals €666,666"
+      #click_link "More hospitals €666,666"
+      click_link "Go to ideas"
 
       within("#budget_investment_#{investment1.id}") do
         expect(page).to have_content investment1.title
