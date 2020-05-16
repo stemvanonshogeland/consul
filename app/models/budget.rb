@@ -175,7 +175,7 @@ class Budget < ApplicationRecord
     when "finished"
       %w{random}
     else
-      %w{random confidence_score}
+      %w{confidence_score random}
     end
   end
 
