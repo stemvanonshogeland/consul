@@ -114,10 +114,9 @@ describe "System Emails" do
       visit admin_system_email_view_path("budget_investment_selected")
 
       expect(page).to have_content "Your investment project '#{investment.code}' has been selected"
-      expect(page).to have_content "Start to get votes, share your investment project"
+      expect(page).to have_content "Share your idea on social media and with your neighbours"
 
-      share_url = budget_investment_url(budget, investment, anchor: "social-share")
-      expect(page).to have_link "Share your investment project", href: share_url
+      expect(page).to have_link "Share your investment project"
     end
 
     scenario "#budget_investment_unfeasible" do
