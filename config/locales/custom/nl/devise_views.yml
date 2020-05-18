@@ -25,7 +25,7 @@ nl:
           organization_signup: Lees hier de %{signup_link}.
           organization_signup_link: gebruiksvoorwaarden
           submit: Registreren
-          terms: "Ik ben een inwoner van Groningen en ik accepteer de gebruiksvoorwaarden."
+          terms: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de gebruiksvoorwaarden."
           username_label: Gebruikersnaam
           username_note: De opgegeven naam zal zichtbaar zijn voor andere gebruikers
         success:
