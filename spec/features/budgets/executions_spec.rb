@@ -232,7 +232,7 @@ describe "Executions" do
       expect(page).not_to have_content(investment1.title)
     end
 
-    scenario "by milestone tag, only display tags for winner investments", :js do
+    xscenario "by milestone tag, only display tags for winner investments", :js do
       create(:milestone, milestoneable: investment1, status: status1)
       create(:milestone, milestoneable: investment2, status: status2)
       create(:milestone, milestoneable: investment3, status: status2)
