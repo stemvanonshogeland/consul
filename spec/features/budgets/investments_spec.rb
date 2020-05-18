@@ -632,14 +632,20 @@ describe "Budget Investments" do
     before { budget.update(phase: "selecting") }
     let(:per_page) { Budgets::InvestmentsController::PER_PAGE }
 
-    scenario "Default order is random" do
+    scenario "Default order is confident score" do
       (per_page + 2).times { create(:budget_investment, heading: heading) }
+
+      budget.investments.order(:id).find_each do |investment|
+        investment.update_columns(confidence_score: investment.id)
+      end
+      expected_order = budget.investments.order(:id).map(&:title).reverse.first(per_page)
 
       visit budget_investments_path(budget, heading_id: heading.id)
 
-      within(".submenu .is-active") { expect(page).to have_content "random" }
+      within(".submenu .is-active") { expect(page).to have_content "highest rated" }
       order = all(".budget-investment h3").collect { |i| i.text }
       expect(order).not_to be_empty
+      expect(order).to eq expected_order
 
       visit budget_investments_path(budget, heading_id: heading.id)
       new_order = all(".budget-investment h3").collect { |i| i.text }
@@ -739,11 +745,13 @@ describe "Budget Investments" do
 
       in_browser(:one) do
         visit budget_investments_path(budget, heading: heading)
+        click_link "random"
         @first_user_investments_order = investments_order
       end
 
       in_browser(:two) do
         visit budget_investments_path(budget, heading: heading)
+        click_link "random"
         @second_user_investments_order = investments_order
       end
 
@@ -1522,7 +1530,8 @@ describe "Budget Investments" do
 
       first(:link, "Participatory budgeting").click
 
-      click_link "More hospitals €666,666"
+      #click_link "More hospitals €666,666"
+      click_link "Go to ideas"
 
       within("#budget_investment_#{investment1.id}") do
         expect(page).to have_content investment1.title

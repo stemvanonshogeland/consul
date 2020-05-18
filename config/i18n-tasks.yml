@@ -218,6 +218,7 @@ ignore_unused:
   - "budgets.investments.show.code_html"
   - "mailers.budget_investment_unfeasible.sorry"
   - "stats.budgets.link"
+  - "budgets.investments.header.price"
 ####
 ## Exclude these keys from the `i18n-tasks eq-base" report:
 # ignore_eq_base:

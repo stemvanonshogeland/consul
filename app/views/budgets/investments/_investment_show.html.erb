@@ -92,7 +92,7 @@
         </div>
       </div>
 
-      <div id="sidebar" class="small-12 medium-3 column">
+      <aside id="sidebar" class="small-12 medium-3 column">
         <% if can_destroy_image?(investment) || can?(:edit, investment) %>
           <div class="sidebar-divider"></div>
           <p class="sidebar-title"><%= t("budgets.investments.show.author") %></p>
@@ -216,7 +216,7 @@
 
         <%= render "communities/access_button", community: investment.community %>
 
-       </div>
+      </aside>
     </div>
   </section>
 <% end %>

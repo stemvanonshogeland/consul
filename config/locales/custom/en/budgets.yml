@@ -1,5 +1,9 @@
 en:
   budgets:
+    index:
+      go_to_ideas: "Go to ideas"
     investments:
       form:
         updated_notice: Investment project updated successfully.
+      index:
+        by_heading_description: "Between l'Alsace Avenue and Maple Avenue"
