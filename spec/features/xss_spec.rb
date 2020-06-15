@@ -172,4 +172,16 @@ describe "Cross-Site Scripting protection", :js do
     expect(page.text).not_to be_empty
     expect(page).to have_css "h1#title-1", text: "Title 1"
   end
+
+  scenario "legislation version body allows links and images" do
+    body = '<a href="https://domain.com/url">link</a>
+            <img src="/image.png">'
+    version = create(:legislation_draft_version, :published, body: body)
+
+    visit legislation_process_draft_version_path(version.process, version)
+
+    expect(page.text).not_to be_empty
+    expect(page).to have_link "link", href: "https://domain.com/url"
+    expect(page).to have_css('img[src="/image.png"')
+  end
 end
