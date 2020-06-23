@@ -279,3 +279,34 @@ footer {
 .draft-panels .comments-on .calc-index .draft-index-rotated .panel-title {
   display: none;
 }
+
+.draft-panels {
+
+  .draft-allegation {
+
+    @include breakpoint(medium) {
+      .calc-index {
+        width: calc(25% - 25px);
+      }
+
+      .calc-text {
+        width: calc(75% - 25px);
+      }
+    }
+
+    .calc-text {
+
+      table {
+        display: block;
+        font-size: $small-font-size;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+    }
+
+    a,
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

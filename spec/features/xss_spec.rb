@@ -184,4 +184,21 @@ describe "Cross-Site Scripting protection", :js do
     expect(page).to have_link "link", href: "https://domain.com/url"
     expect(page).to have_css('img[src="/image.png"')
   end
+
+  scenario "legislation version body allows tables" do
+    body = "<table><thead><tr><th>Table header</th><th>Table header 2</th></tr></thead>
+            <tbody><tr><td>Table cell</td><td>Table cell 2</td></tr></tbody></table>"
+    version = create(:legislation_draft_version, :published, body: body)
+
+    visit legislation_process_draft_version_path(version.process, version)
+
+    expect(page.text).not_to be_empty
+
+    expect(page).to have_selector("table")
+    expect(page).to have_selector("thead")
+    expect(page).to have_selector("tbody")
+    expect(page).to have_selector("th", count: 2)
+    expect(page).to have_selector("tr", count: 2)
+    expect(page).to have_selector("td", count: 2)
+  end
 end
