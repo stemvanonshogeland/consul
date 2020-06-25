@@ -5,6 +5,7 @@
 // 04. Social
 // 05. Homepage
 // 06. Budgets
+// 07. Processes
 //
 
 
@@ -60,6 +61,12 @@
       color: #fcd02f;
     }
   }
+}
+
+.home-page .jumbo .row p {
+  color: $text;
+  font-size: $base-font-size;
+  line-height: $line-height * 1.5;
 }
 
 // 02. Header
@@ -256,4 +263,50 @@ footer {
 .budgets-stats .header a,
 .budgets-stats .header .icon-angle-left {
   color: #fff;
+}
+
+// 07. Processes
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.legislation-hero .row {
+
+  p {
+    color: $text;
+  }
+}
+
+.legislation-list .legislation-calendar-info,
+.draft-panels .comments-on .calc-index .draft-index-rotated .panel-title {
+  display: none;
+}
+
+.draft-panels {
+
+  .draft-allegation {
+
+    @include breakpoint(medium) {
+      .calc-index {
+        width: calc(25% - 25px);
+      }
+
+      .calc-text {
+        width: calc(75% - 25px);
+      }
+    }
+
+    .calc-text {
+
+      table {
+        display: block;
+        font-size: $small-font-size;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+    }
+
+    a,
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 }
