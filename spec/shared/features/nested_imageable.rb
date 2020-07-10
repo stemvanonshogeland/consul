@@ -208,11 +208,7 @@ shared_examples "nested imageable" do |imageable_factory_name, path, imageable_p
         # Pending. Review soon and test
       else
         expect(page).to have_selector "figure img"
-
-        # Remove figcaption with image title in custom budget investment
-        unless imageable_factory_name == "budget_investment"
-          expect(page).to have_selector "figure figcaption"
-        end
+        expect(page).to have_selector "figure figcaption" if show_caption_for?(imageable_factory_name)
       end
     end
 
@@ -316,5 +312,5 @@ def expect_image_has_cached_attachment(extension)
 end
 
 def show_caption_for?(imageable_factory_name)
-  imageable_factory_name != "budget" && imageable_factory_name != "proposal"
+  imageable_factory_name != "budget" && imageable_factory_name != "proposal" && imageable_factory_name != "budget_investment"
 end
