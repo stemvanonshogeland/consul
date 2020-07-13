@@ -43,6 +43,7 @@ nl:
         help_text_2: "Om een discussie te starten of om deel te nemen aan een discussie moet je je %{org}."
         help_text_link: "aanmelden"
     new:
+      recommendations_title: "Advies bij het starten van een discussie"
       form:
         submit_button: "Discussie starten"
       start_new: "Discussie starten"
@@ -136,7 +137,7 @@ nl:
       motivation_2: "<strong>Wanneer je niet zo goed weet hoe je die campagne op moet zetten, kunnen wij je begeleiden. Je kunt er nu voor kiezen om eerst met onze hulp een campagne op te zetten en het concept van je initiatief op te slaan. Je kunt nu ook je initiatief direct publiceren op de website.</strong>"
       publish: "Nee, ik wil mijn initiatief direct publiceren"
       dashboard: "Ja, ik wil hulp en ik publiceer mijn initiatief later"
-      preview_title: "Dit is hoe je initiatief eruit ziet wanneer je het nu publiceert."
+      preview_title: "Dit is hoe je initiatief eruit ziet wanneer je het nu publiceert"
     notice:
       published: "Initiatief gepubliceerd"
     retire_form:
@@ -190,8 +191,13 @@ nl:
         follows:
           one: "1 Volgend"
           other: "%{count} Volgend"
+        proposals:
+          one: "1 Initiatief"
+          other: "%{count} Initiatieven"
     proposals:
       draft: "Concept"
+      published: "Gepubliceerd"
+      retired: "Teruggetrokken"
   layouts:
     header:
       collaborative_legislation: "Inspraak"
@@ -214,13 +220,14 @@ nl:
       facebook: "facebook/stemvangroningen"
     dashboard:
       proposal_header:
-        published: "Published"
+        published: "Gepubliceerd"
         draft: "Concept"
-        retired: "Retired"
+        retired: "Teruggetrokken"
       proposal_totals:
-        active_resources: "Actieve"
+        active_resources: "Actieve promotiemiddelen"
         community: "Deelnemers in community"
         preview_proposal: "Preview"
+        show_proposal: "Bekijk  initiatief"
         current_goal: "Huidige doel"
         supports:
           zero: "Geen steun"
@@ -280,8 +287,8 @@ nl:
     suggest:
       debate:
         found:
-          one: "Er bestaat al een discussie met de term '%{query}'. Je kunt deelnemen aan die discussie in plaats van een nieuwe discussie te delen."
-          other: "Er bestaan al discussies met de term '%{query}'. Je kunt deelnemen aan die discussies in plaats van een nieuwe discussie te delen."
+          one: "Er bestaat al een discussie met de term '%{query}'. Je kunt deelnemen aan die discussie in plaats van een nieuwe discussie te starten."
+          other: "Er bestaan al discussies met de term '%{query}'. Je kunt deelnemen aan die discussies in plaats van een nieuwe discussie te starten."
       budget_investment:
         message: "%{limit} van %{count} voorstellen met de term '%{query}'"
         found:
@@ -317,6 +324,7 @@ nl:
       polls: "Peilingen"
       messages: "Berichten naar gebruikers"
       related_content: "Gerelateerde inhoud"
+      resources: "Campagnemiddelen"
     progress:
       title: "Grafiek"
       group_by_month: "Maandelijks"
@@ -342,7 +350,7 @@ nl:
       comments: "Reacties"
     messages:
       send_notification: "Stuur berichten naar volgers van mijn initiatief"
-      previous_notifications: "Bekijk eerdere meldingen"
+      previous_notifications: "Bekijk eerdere berichten"
     polls:
       index:
         title: "Peilingen"
@@ -353,6 +361,7 @@ nl:
           other: "Je hebt %{count} peiling gecreëerd"
       new:
         title: "Nieuwe peiling"
+        submit: "Poll creëren"
       poll:
         responses:
           one: "%{count} reactie"
@@ -376,6 +385,8 @@ nl:
         send: "Verzenden naar %{address}"
       create:
         sent: "Mail verzonden"
+      new:
+        title: "E-mail om te delen"
   proposal_notifications:
     new:
       info_about_receivers: "Dit bericht wordt naar <strong>%{count} mensen</strong> gestuurd en is zichtbaar op de %{proposal_page}.<br> Berichten worden niet direct gestuurd, maar de gebruikers ontvangen periodiek een email met alle notificaties omtrent jouw initiatief."
@@ -398,3 +409,8 @@ nl:
   stats:
     index:
       comments: "Reacties"
+  communities:
+    show:
+      surveys: "Peilingen"
+    subnav:
+      surveys: "Peilingen"
