@@ -1453,7 +1453,7 @@ footer {
     float: right;
     line-height: $line-height * 2;
     margin-top: $line-height / 4;
-    padding: 0 $line-height / 2;
+    padding: 0 $line-height / 2 !important;
   }
 
   .comment-header {
@@ -1495,6 +1495,7 @@ footer {
     }
 
     .votes {
+      bottom: 12px !important;
       right: 12px !important;
     }
 
