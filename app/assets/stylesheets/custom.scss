@@ -600,6 +600,7 @@ header {
     background: $light;
     border: 2px solid #fff;
     border-radius: rem-calc(12);
+    color: $text;
     height: 100%;
 
     &:hover {
@@ -680,6 +681,37 @@ header {
       position: absolute;
       top: -1px;
     }
+  }
+
+  &.budget .description {
+    display: block;
+    max-height: $line-height * 5;
+    overflow: hidden;
+    padding: 0 $line-height / 2;
+    position: relative;
+
+    &::after {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $light 50%);
+      bottom: 0;
+      content: "";
+      height: 24px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    p {
+      color: $text;
+      padding: 0;
+      text-align: left;
+    }
+  }
+}
+
+.welcome-cards {
+
+  @include breakpoint(medium) {
+    display: flex;
   }
 }
 
@@ -1383,7 +1415,6 @@ footer {
   }
 
   aside {
-    border-left: 2px solid $border;
 
     h3 {
       color: $label;
@@ -1428,7 +1459,7 @@ footer {
     float: right;
     line-height: $line-height * 2;
     margin-top: $line-height / 4;
-    padding: 0 $line-height / 2;
+    padding: 0 $line-height / 2 !important;
   }
 
   .comment-header {
@@ -1470,6 +1501,7 @@ footer {
     }
 
     .votes {
+      bottom: 12px !important;
       right: 12px !important;
     }
 

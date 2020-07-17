@@ -22,7 +22,12 @@ namespace :migrations do
   task add_name_to_existing_budget_phases: :environment do
     Budget::Phase::Translation.find_each do |translation|
       unless translation.name.present?
-        i18n_name = I18n.t("budgets.phase.#{translation.globalized_model.kind}", locale: translation.locale)
+        if I18n.available_locales.include? translation.locale
+          locale = translation.locale
+        else
+          locale = I18n.default_locale
+        end
+        i18n_name = I18n.t("budgets.phase.#{translation.globalized_model.kind}", locale: locale)
         translation.update!(name: i18n_name)
       end
     end
@@ -34,7 +39,7 @@ namespace :migrations do
       if phase.summary.present?
         phase.description << "<br>"
         phase.description << phase.summary
-        phase.save!
+        phase.update!(summary: nil) if phase.save
       end
     end
   end
