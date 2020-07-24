@@ -30,7 +30,7 @@ en:
     footer:
       org_name: "Stem van Groningen"
       contact_title: "Neem contact met ons:"
-      contact_email: "stemvangroningen@groningen.nl"
+      contact_email: "destemvan@groningen.nl"
       facebook: "facebook/stemvangroningen"
   debates:
     index:
@@ -64,3 +64,8 @@ en:
       section_header:
         description: "Give your opinion on specific topics"
       remaining: "Remaining <strong>%{days}</strong> to participate"
+  poll_questions:
+    show:
+      vote_registered: "Your vote has been registered correctly."
+  shared:
+    expired: "Expired"
