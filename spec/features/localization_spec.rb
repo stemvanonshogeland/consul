@@ -61,6 +61,7 @@ describe "Localization" do
       visit "/"
       expect(page).not_to have_content("Language")
       expect(page).not_to have_css("div.locale")
+      expect(page).not_to have_css(".top-links")
     end
   end
 
@@ -86,6 +87,24 @@ describe "Localization" do
       within(".locale-form .js-location-changer") do
         expect(page).to have_content "wl"
       end
+    end
+  end
+
+  scenario "uses default locale when session locale has disappeared" do
+    default_locales = I18n.available_locales
+
+    visit root_path(locale: :es)
+
+    expect(page).to have_content "Entrar"
+
+    begin
+      I18n.available_locales = default_locales - [:es]
+
+      visit root_path
+
+      expect(page).to have_content "Sign in"
+    ensure
+      I18n.available_locales = default_locales
     end
   end
 end
