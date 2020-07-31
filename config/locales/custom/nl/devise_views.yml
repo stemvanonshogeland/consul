@@ -10,7 +10,7 @@ nl:
       login_items:
         login: "Inloggen"
         logout: "Uitloggen"
-        signup: "Registreren"
+        signup: "Aanmelden"
     shared:
       sign_in: "Inloggen bestaand account"
       sign_up: "Aanmelden nieuw account"
@@ -18,7 +18,7 @@ nl:
       not_organization_link: "hier"
       links:
         new_confirmation: "Geen activeringsinstructies voor je account ontvangen?"
-        login: "Aanmelden"
+        login: "Inloggen"
     organizations:
       registrations:
         new:
@@ -26,8 +26,8 @@ nl:
           responsible_name_note: "Dit is de persoon die namens de vereniging of het collectief initiatieven indient"
     sessions:
       new:
-        submit: "Aanmelden"
-        title: "Aanmelden"
+        submit: "Inloggen"
+        title: "Inloggen"
     users:
       registrations:
         new:
@@ -39,7 +39,7 @@ nl:
           terms: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de %{terms}."
           terms_link: "gebruiksvoorwaarden"
           terms_title: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de gebruiksvoorwaarden"
-          submit: "Registreren"
+          submit: "Aanmelden"
           username_label: "Gebruikersnaam"
           username_note: "De opgegeven naam zal zichtbaar zijn voor andere gebruikers"
         success:
