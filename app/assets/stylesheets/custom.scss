@@ -562,7 +562,7 @@ header {
 
     @include breakpoint(large) {
       background: none;
-      background-position: right;
+      background-position: right -150px bottom 0;
       background-repeat: no-repeat;
       background-size: contain;
       margin-top: $line-height * 2;
@@ -570,7 +570,11 @@ header {
     }
 
     h1 {
-      font-size: rem-calc(90);
+      font-size: rem-calc(60);
+
+      @include breakpoint(large) {
+        font-size: rem-calc(90);
+      }
     }
   }
 
