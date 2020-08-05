@@ -70,7 +70,6 @@ nl:
     investments:
       index:
         by_heading: "Ideeën voor %{heading}"
-        by_heading_description: "Tussen de Berkenlaan en Elzenlaan"
         sidebar:
           voted:
             one: "Je hebt op <strong>1 idee</strong> gestemd die in totaal %{amount_spent} kosten."

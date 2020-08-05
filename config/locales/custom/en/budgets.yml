@@ -3,8 +3,6 @@ en:
     investments:
       investment:
         remove_support: "Remove your support"
-      index:
-        by_heading_description: "Between l'Alsace Avenue and Maple Avenue"
     ballots:
       show:
         back: "Go back to budgets"
