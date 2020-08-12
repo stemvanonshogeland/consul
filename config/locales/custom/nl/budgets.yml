@@ -43,7 +43,7 @@ nl:
       current_phase: "Huidige fase"
       section_header:
         title: "Ideeën"
-        help: "Toelichting"
+        help: "Veelgestelde vragen"
       section_footer:
         title: "Over dit proces"
         description: "Beslis mee over de verdeling van geld tussen verschillende ideeën en projecten."
@@ -111,7 +111,7 @@ nl:
         title: "Ideeën"
       show:
         title: "Idee"
-        supports: "Steun"
+        supports: "Steunen"
         location: "Locatie: <strong>%{location}</strong>"
         organization_name: "Idee ingediend door: <strong>%{name}</strong>"
         author: "Auteur"
@@ -138,7 +138,7 @@ nl:
       investment:
         price_title: "Prijs"
         support_title: "Stemmen"
-        give_support: "Steun"
+        give_support: "Steunen"
         remove_support: "Steun verwijderen"
         supports:
           zero: "nog geen steun"
