@@ -290,7 +290,6 @@ nl:
       contact_title: "Neem contact met ons op"
       privacy: "Privacyverklaring"
       contact_email: "destemvan@groningen.nl"
-      facebook: "facebook/stemvangroningen"
     dashboard:
       proposal_header:
         published: "Gepubliceerd"
