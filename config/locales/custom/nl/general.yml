@@ -339,6 +339,7 @@ nl:
         budgets: "Ideeën"
       see_budget: "Bekijk ideeën"
       see_all_proposals: "Alle initiatieven"
+      see_process: "Bekijk plan"
     cards:
       title: "Uitgelicht"
   shared:
