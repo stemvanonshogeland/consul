@@ -1767,6 +1767,20 @@ footer {
   border: 1px solid $border;
 }
 
+.newsletter-body-content {
+
+  tr {
+    border: 0 !important;
+
+    &:nth-child(even),
+    &:nth-child(even) td:last-child,
+    &:nth-child(odd) td:last-child,
+    &:hover {
+      background: none !important;
+    }
+  }
+}
+
 // 8. Debates
 // --------------------
 
