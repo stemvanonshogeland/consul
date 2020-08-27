@@ -29,14 +29,6 @@
                                   title: t("shared.go_to_page") + t("layouts.header.poll_questions") %>
       </li>
     <% end %>
-    <% if feature?(:legislation) %>
-      <li>
-        <%= layout_menu_link_to t("layouts.header.collaborative_legislation"),
-                                legislation_processes_path,
-                                controller.class.parent == Legislation,
-                                accesskey: "4" %>
-      </li>
-    <% end %>
     <% if feature?(:budgets) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.budgets"),
@@ -44,6 +36,14 @@
                                   controller_name == "budgets" || controller_name == "investments",
                                   accesskey: "5",
                                   title: t("shared.go_to_page") + t("layouts.header.budgets") %>
+      </li>
+    <% end %>
+    <% if feature?(:legislation) %>
+      <li>
+        <%= layout_menu_link_to t("layouts.header.collaborative_legislation"),
+                                legislation_processes_path,
+                                controller.class.parent == Legislation,
+                                accesskey: "4" %>
       </li>
     <% end %>
     <% if feature?(:help_page) %>
