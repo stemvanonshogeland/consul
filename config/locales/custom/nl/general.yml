@@ -51,7 +51,7 @@ nl:
         description: "Start een discussie om je mening met anderen te delen over onderwerpen die jij belangrijk vindt."
         help_text_1: "Deel je mening over allerlei onderwerpen, kansen of knelpunten die jij belangrijk vindt."
         help_text_2: "Om een discussie te starten of om deel te nemen aan een discussie moet je je %{org}."
-        help_text_link: "aanmelden"
+        help_text_link: "registreren"
       title: "Discussies"
       search_form:
         title: "Zoek"
@@ -234,7 +234,7 @@ nl:
     login_to_comment: "Je moet %{signin} of je %{signup} om te kunnen reageren."
     login_to_continue: "Je moet %{signin} of je %{signup} om verder te gaan."
     signin: "inloggen"
-    signup: "aanmelden"
+    signup: "registreren"
     show:
       comments: "Reacties"
       proposals: "Initiatieven"
@@ -317,7 +317,7 @@ nl:
       subtitle: ""
       step_1:
         number: "1"
-        title: "Aanmelden"
+        title: "Registreren"
         description: "Gebruik Twitter, Facebook, Google, of jouw mailadres om in te loggen."
         link: "Meld je binnen vijf minuten aan"
       step_2:
@@ -482,17 +482,17 @@ nl:
   omniauth:
     facebook:
       sign_in: "Inloggen via Facebook"
-      sign_up: "Aanmelden via Facebook"
+      sign_up: "Registreren via Facebook"
       name: "Facebook"
     finish_signup:
       title: "Verdere details"
       username_warning: "Door een verandering in de manier waarop we met sociale netwerken communiceren, is het mogelijk dat uw gebruikersnaam nu als 'al in gebruik' verschijnt. Kiest u dan een andere gebruikersnaam, aub."
     google_oauth2:
       sign_in: "Inloggen via Google"
-      sign_up: "Aanmelden met Google"
+      sign_up: "Registreren met Google"
       name: "Google"
     info_sign_in: "Inloggen via sociale media"
-    info_sign_up: "Aanmelden via sociale media"
+    info_sign_up: "Registreren via sociale media"
     or_fill: "Of vul het formulier in"
   stats:
     index:

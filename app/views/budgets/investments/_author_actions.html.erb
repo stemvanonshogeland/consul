@@ -3,7 +3,7 @@
   <h2><%= t("budgets.investments.show.author") %></h2>
   <div class="show-actions-menu">
     <% if can?(:edit, investment) %>
-      <%= link_to t("shared.edit"),
+      <%= link_to t("budgets.investments.show.edit"),
                   edit_budget_investment_path(investment.budget, investment),
                   method: :get, class: "button hollow expanded" %>
     <% else %>

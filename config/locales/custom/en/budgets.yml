@@ -3,6 +3,8 @@ en:
     investments:
       investment:
         remove_support: "Remove your support"
+      show:
+        edit: "Edit"
     ballots:
       show:
         back: "Go back to budgets"

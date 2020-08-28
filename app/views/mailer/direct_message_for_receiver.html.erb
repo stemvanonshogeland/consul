@@ -1,4 +1,9 @@
 <td style="padding-bottom: 20px; padding-left: 10px;">
+
+  <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
+    <%= t("mailers.direct_message_for_receiver.title") %>
+  </p>
+
   <h1 style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;">
     <%= @direct_message.title %>
   </h1>
@@ -21,17 +26,7 @@
     </tbody>
   </table>
 
-  <table style="width: 100%;">
-    <tbody>
-      <tr>
-        <td style="padding-left: 10px;">
-          <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px; margin: 0; font-style: italic; padding-bottom: 20px;">
-            <%= sanitize(t("mailers.direct_message_for_receiver.unsubscribe",
-                account: link_to(t("mailers.direct_message_for_receiver.unsubscribe_account"),
-                                account_url, style: "color: #2895F1; text-decoration: none;"))) %>
-          </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 12px;font-weight: normal;line-height: 20px;">
+    <%= t("mailers.config.manage_email_subscriptions") %> <%= link_to t("account.show.title"), account_url, style: "color: #2895F1; text-decoration:none;" %>
+  </p>
 </td>

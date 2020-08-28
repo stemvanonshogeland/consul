@@ -1,11 +1,15 @@
 <td style="padding-bottom: 20px; padding-left: 10px;">
 
+  <h1 style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;">
+    <%= t("mailers.budget_investment_selected.title") %>
+  </h1>
+
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
     <%= t("mailers.budget_investment_selected.hi") %>
   </p>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
-    <%= t("mailers.budget_investment_selected.share") %>
+    <%= sanitize(t("mailers.budget_investment_selected.share")) %>
   </p>
 
   <table style="width: 100%;">
@@ -20,10 +24,6 @@
       </tr>
     </tbody>
   </table>
-
-  <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
-    <%= t("mailers.budget_investment_selected.thanks") %>
-  </p>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
     <%= t("mailers.budget_investment_selected.sincerely") %>
