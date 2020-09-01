@@ -50,7 +50,7 @@ nl:
           thank_you: "Bedankt voor het invullen van je gegevens. Om je aanmelding te voltooien moet je je e-mailadres verifiëren. "
     confirmations:
       new:
-        title: "Stuur verificatie instructies opnieuw"
+        title: "Stuur registratiemail opnieuw"
         description: "Heb je geen link ontvangen? Misschien is deze in je spamfolder terecht gekomen. Via onderstaande knop kun je de mail opnieuw laten versturen."
         submit: "Stuur link opnieuw"
       show:
