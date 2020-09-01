@@ -8,7 +8,14 @@
   <div class="row collapse">
     <div class="small-12 column">
       <div class="small-12 medium-8 column">
-        <p><%= t("#{i18n_namespace}.description") %></p>
+        <p>
+          <% if namespace == "legislation" %>
+            <%= sanitize(t("#{i18n_namespace}.description",
+                            link: link_to(t("#{i18n_namespace}.description_link"), budgets_path))) %>
+          <% else %>
+            <%= t("#{i18n_namespace}.description") %>
+          <% end %>
+        </p>
       </div>
       <div class="small-12 medium-4 column text-right">
         <%= link_to t("#{i18n_namespace}.help"), "#section_help" %>

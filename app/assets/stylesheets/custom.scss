@@ -407,6 +407,10 @@ aside {
   }
 }
 
+.cke_path {
+  display: none;
+}
+
 // 1. Header
 // --------------------
 
@@ -976,6 +980,21 @@ footer {
 
   img {
     margin-top: rem-calc(100);
+  }
+
+  .button {
+    margin-top: $line-height * 2;
+    padding-right: $line-height * 1.5;
+    position: relative;
+
+    &::after {
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      position: absolute;
+      right: 12px;
+      top: 19px;
+    }
   }
 }
 
@@ -1746,6 +1765,20 @@ footer {
 
 .ui-datepicker-calendar thead tr th {
   border: 1px solid $border;
+}
+
+.newsletter-body-content {
+
+  tr {
+    border: 0 !important;
+
+    &:nth-child(even),
+    &:nth-child(even) td:last-child,
+    &:nth-child(odd) td:last-child,
+    &:hover {
+      background: none !important;
+    }
+  }
 }
 
 // 8. Debates

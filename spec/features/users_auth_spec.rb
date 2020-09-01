@@ -442,7 +442,8 @@ describe "Users" do
 
     visit "/"
     click_link "Sign in"
-    click_link "Haven't received instructions to activate your account?"
+    expect(page).to have_content "Haven't received instructions to activate your account?"
+    click_link "Click here"
 
     fill_in "user_email", with: "manuela@consul.dev"
     click_button "Re-send instructions"
@@ -455,7 +456,8 @@ describe "Users" do
   scenario "Re-send confirmation instructions with unexisting email" do
     visit "/"
     click_link "Sign in"
-    click_link "Haven't received instructions to activate your account?"
+    expect(page).to have_content "Haven't received instructions to activate your account?"
+    click_link "Click here"
 
     fill_in "user_email", with: "fake@mail.dev"
     click_button "Re-send instructions"

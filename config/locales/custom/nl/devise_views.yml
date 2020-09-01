@@ -10,14 +10,15 @@ nl:
       login_items:
         login: "Inloggen"
         logout: "Uitloggen"
-        signup: "Aanmelden"
+        signup: "Registreren"
     shared:
       sign_in: "Inloggen bestaand account"
-      sign_up: "Aanmelden nieuw account"
+      sign_up: "Registreren nieuw account"
       not_organization: "Vertegenwoordig je geen organisatie of collectief? Meld je dan %{link} aan."
       not_organization_link: "hier"
       links:
-        new_confirmation: "Geen activeringsinstructies voor je account ontvangen?"
+        new_confirmation: "Heb je geen link ontvangen in je mail? Misschien is deze in je spamfolder gekomen. Ook niet? %{link}."
+        new_confirmation_link: "Klik dan hier"
         login: "Inloggen"
     organizations:
       registrations:
@@ -32,14 +33,14 @@ nl:
       registrations:
         new:
           email_label: "Emailadres"
-          title: "Aanmelden"
+          title: "Registreren"
           organization_signup: "Vertegenwoordig je een organisatie of collectief? Meld je dan %{signup_link} aan."
           organization_signup_link: "hier"
           username_note: "De opgegeven naam zal zichtbaar zijn voor andere gebruikers"
           terms: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de %{terms}."
           terms_link: "gebruiksvoorwaarden"
           terms_title: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de gebruiksvoorwaarden"
-          submit: "Aanmelden"
+          submit: "Registreren"
           username_label: "Gebruikersnaam"
           username_note: "De opgegeven naam zal zichtbaar zijn voor andere gebruikers"
         success:
@@ -49,6 +50,8 @@ nl:
           thank_you: "Bedankt voor het invullen van je gegevens. Om je aanmelding te voltooien moet je je e-mailadres verifiëren. "
     confirmations:
       new:
-        title: "Stuur verificatie instructies opnieuw"
+        title: "Stuur registratiemail opnieuw"
+        description: "Heb je geen link ontvangen? Misschien is deze in je spamfolder terecht gekomen. Via onderstaande knop kun je de mail opnieuw laten versturen."
+        submit: "Stuur link opnieuw"
       show:
         submit: "Bevestig"

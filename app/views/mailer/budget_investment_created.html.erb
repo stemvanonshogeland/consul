@@ -5,19 +5,18 @@
   </h1>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
-    <%= sanitize(t("mailers.budget_investment_created.intro",
-           author: @investment.author.name)) %>
+    <%= sanitize(t("mailers.budget_investment_created.intro", author: @investment.author.name)) %>
   </p>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
-    <%= sanitize(t("mailers.budget_investment_created.text",
+  <%= sanitize(t("mailers.budget_investment_created.text",
            investment: @investment.title,
            budget: @investment.budget.name)) %>
   </p>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
     <%= sanitize(t("mailers.budget_investment_created.follow",
-           link: link_to(t("mailers.budget_investment_created.follow_link"), budgets_url))) %>
+                 link: link_to(t("mailers.budget_investment_created.follow_link"), budgets_url))) %>
   </p>
 
   <table style="width: 100%;">
