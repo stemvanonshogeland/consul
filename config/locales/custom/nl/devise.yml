@@ -30,7 +30,7 @@ nl:
       locked: "Je account is vergrendeld"
       last_attempt: "Je hebt nog één poging over voordat jouw account wordt geblokkeerd."
       timeout: "Oeps! Je sessie is verlopen. Meld je opnieuw aan om verder te gaan"
-      unauthenticated: "Log in om verder te gaan. Nog geen account? Maak deze eenvoudig aan via 'registreren"
+      unauthenticated: "Log in om verder te gaan. Nog geen account? Maak deze eenvoudig aan via 'registreren'"
       unconfirmed: "Je account is nog niet geactiveerd. Klik op de link in je e-mail om jouw account te activeren "
     registrations:
       destroyed: "Jammer dat je gaat! Je account is succesvol verwijderd. Wij hopen je nog een keer terug te zien"
