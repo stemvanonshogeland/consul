@@ -8,7 +8,7 @@ nl:
       follow: "We houden je op de hoogte van het proces. Je kunt dit ook volgen op <strong>%{link}</strong>."
       follow_link: "Burgerbegroting"
       sincerely: "Groeten van Stem van Groningen"
-      share: "Deel"
+      share_button: "Deel je idee"
     config:
       manage_email_subscriptions: "Wil je dit soort mails niet meer ontvangen? Verander dan hier je instellingen"
     budget_investment_selected:
