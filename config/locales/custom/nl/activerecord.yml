@@ -39,7 +39,7 @@ nl:
         summary: "Samenvatting initiatief"
         retired_explanation: "Toelichting"
       user:
-        email_digest: "Ontvang een samenvatting van notificaties van initiatieven"
+        email_digest: "Ontvang meldingen van door mij gevolgde initiatieven"
         email_on_comment: "Stuur mij een mail wanneer iemand reageert op mijn initiatieven of discussies"
         email_on_comment_reply: "Stuur mij een mail wanneer iemand op mijn reactie reageert"
         email_on_direct_message: "Ontvang emails over privéberichten"
