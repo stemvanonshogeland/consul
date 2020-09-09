@@ -72,7 +72,9 @@
                   </div>
                   <script src="https://player.vimeo.com/api/player.js"></script>
                 <% elsif phase.image.present? %>
-                  <%= image_tag phase.image.attachment.url(:large) %>
+                  <%= image_tag phase.image.attachment.url(:large),
+                                title: phase.image.title.unicode_normalize,
+                                alt: phase.image.title.unicode_normalize %>
                 <% end %>
               </div>
             </div>
