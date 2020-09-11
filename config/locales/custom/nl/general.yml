@@ -262,7 +262,7 @@ nl:
       new:
         signin: "Inloggen"
         authenticate: "Je moet %{signin} of %{signup} om verder te gaan."
-        submit_button: "Stuur melding"
+        submit_button: "Bericht sturen"
   layouts:
     header:
       collaborative_legislation: "Inspraak"
