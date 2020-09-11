@@ -1217,6 +1217,11 @@ footer {
   color: $brand;
 }
 
+.budget-investment.index .panel img {
+  border-bottom-left-radius: 0;
+  width: 100%;
+}
+
 .budget-info,
 .budget-investment-index-list {
 
