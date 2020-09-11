@@ -156,7 +156,7 @@ nl:
         price: "Dit proces heeft een budget van"
         change_ballot: "Als je je bedenkt kun je je stemmen in %{check_ballot} verwijderen en opnieuw beginnen."
       share:
-        message: "Dit is een goed idee voor de Oosterparkwijk! Vanaf 18 november kan je stemmen op dit idee"
+        message: "Dit is een goed idee voor de Groene Parel!"
       new:
         recommendations_title: "Omschrijf het idee. Denk bijvoorbeeld aan:"
         recommendation_one: "Waarom is het een goed idee?"
@@ -199,3 +199,4 @@ nl:
       page_title: "De uitslag"
       show_all_link: "Toon alle ideeën"
       hide_discarded_link: "Verberg niet gekozen ideeën"
+    no_image_alt: "Groene omgeving in Haren"

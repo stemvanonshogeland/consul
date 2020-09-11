@@ -48,6 +48,9 @@ nl:
         public_interests: "Maak de onderwerpen/labels die ik volg openbaar"
         recommended_debates: "Toon aanbevelingen voor discussie"
         recommended_proposals: "Toon aanbevelingen voor voorstellen"
+      direct_message:
+        title: "Titel"
+        body: "Bericht"
       budget:
         main_button_text: "Tekst knop"
         main_button_url: "Link knop"
