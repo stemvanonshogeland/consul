@@ -77,6 +77,25 @@ describe "Admin newsletter emails" do
     expect(page).to have_content "This is a body"
   end
 
+  scenario "Create with an image", :js do
+    html_content = "<p>This newsletter have an image <img src='/image.jpg' alt='Image title'></img></p>"
+    newsletter = create(:newsletter, body: html_content)
+
+    visit edit_admin_newsletter_path(newsletter)
+
+    expect(page).to have_css(".cke_toolbar .cke_button__image_icon")
+
+    visit admin_newsletters_path
+    within("#newsletter_#{newsletter.id}") do
+      click_link "Preview"
+    end
+
+    within ".newsletter-body-content" do
+      expect(page).to have_css "img[src$='image.jpg']"
+      expect(page).to have_css "img[alt='Image title']"
+    end
+  end
+
   scenario "Update" do
     newsletter = create(:newsletter)
 
