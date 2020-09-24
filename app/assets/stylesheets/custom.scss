@@ -1804,6 +1804,11 @@ footer {
 
 .newsletter-body-content {
 
+  li {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: $base-font-size;
+  }
+
   tr {
     border: 0 !important;
 
