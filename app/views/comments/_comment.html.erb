@@ -8,7 +8,7 @@
   <ul id="<%= dom_id(comment) %>" class="comment no-bullet small-12">
     <li class="comment-body">
       <% if comment.hidden? || comment.user.hidden? %>
-        <% if comment.children.size > 0 %>
+        <% unless all_descendants_hidden?(comment) %>
           <div class="callout secondary">
             <p><%= t("comments.comment.deleted") %></p>
           </div>
@@ -121,7 +121,7 @@
         </div>
       <% end %>
     </li>
-    <% unless child_comments_of(comment).empty? %>
+    <% unless all_descendants_hidden?(comment) %>
     <li>
       <ul id="<%= dom_id(comment) %>_children" class="no-bullet comment-children">
         <% child_comments_of(comment).each do |child| %>
