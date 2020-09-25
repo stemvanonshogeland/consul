@@ -54,7 +54,7 @@
                   <%= l(phase.ends_at.to_date - 1.day, format: :long) if phase.ends_at.present? %>
                 </p>
 
-                <%= auto_link_already_sanitized_html(wysiwyg(phase.description)) %></p>
+                <%= auto_link_already_sanitized_html(wysiwyg(phase.description)) %>
 
                 <% if phase.main_button_text.present? && phase.main_button_url.present? %>
                   <%= link_to phase.main_button_text, phase.main_button_url, class: "button large" %>
@@ -65,8 +65,7 @@
                 <% if enabled_phases.first == phase %>
                   <div style="padding:56.25% 0 0 0;position:relative;">
                     <iframe src="https://player.vimeo.com/video/456899778?title=0&byline=0&portrait=0"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                            frameborder="0"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
                             allow="autoplay; fullscreen" allowfullscreen></iframe>
                   </div>
                   <script src="https://player.vimeo.com/api/player.js"></script>

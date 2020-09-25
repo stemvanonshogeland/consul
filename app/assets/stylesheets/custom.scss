@@ -695,7 +695,7 @@ header {
   }
 
   .completed {
-    color: $highlight-text;
+    color: $text;
     display: inline-block;
     position: relative;
     text-transform: uppercase;
@@ -1603,6 +1603,10 @@ footer {
 
 .draft-panels .comments-on .calc-index .draft-index-rotated {
   margin-top: $line-height * 5;
+}
+
+.draft-panels .draft-allegation .draft-panel {
+  color: $text;
 }
 
 .legislation-list .legislation p {
