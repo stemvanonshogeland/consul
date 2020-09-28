@@ -1349,6 +1349,7 @@ describe "Budget Investments" do
   end
 
   scenario "Show title (no message)" do
+    skip "Removed by custom content"
     investment = create(:budget_investment,
                         :feasible,
                         :finished,
