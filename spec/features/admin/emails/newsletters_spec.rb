@@ -79,7 +79,7 @@ describe "Admin newsletter emails" do
 
   scenario "Create with an image", :js do
     html_content = "<p>This newsletter have an image <img src='/image.jpg' alt='Image title'></img></p>"
-    newsletter = create(:newsletter, body: html_content)
+    newsletter = create(:newsletter, body: html_content, segment_recipient: "administrators")
 
     visit edit_admin_newsletter_path(newsletter)
 
