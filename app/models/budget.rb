@@ -238,9 +238,9 @@ class Budget < ApplicationRecord
 
   def investments_preview_list(limit = 9)
     case phase
-    when "accepting", "reviewing"
+    when "accepting", "reviewing", "selecting"
       investments.sample(limit)
-    when "selecting", "valuating", "publishing_prices"
+    when "valuating", "publishing_prices"
       investments.feasible.sample(limit)
     when "balloting", "reviewing_ballots"
       investments.selected.sample(limit)

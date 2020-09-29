@@ -387,6 +387,10 @@ nl:
         zero: "0 Taalinstelling"
         one: "1 Taalinstelling"
         other: "%{count} Taalinstelling"
+    comments:
+      one: "1 opmerking"
+      other: "%{count} opmerkingen"
+      zero: "Geen reacties"
     print:
       print_button: "Afdrukken"
     followable:

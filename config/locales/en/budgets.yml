@@ -132,7 +132,6 @@ en:
         location: "Location: <strong>%{location}</strong>"
         organization_name: "Proposed on behalf of: <strong>%{name}</strong>"
         share: Share
-        title: Investment project
         supports: Supports
         votes: Votes
         price: Price
