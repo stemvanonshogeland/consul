@@ -46,3 +46,6 @@ nl:
       unlocked: "Je account is succesvol ontgrendeld. Je kunt jezelf weer registreren!"
     omniauth_callbacks:
       success: "Successvol aangemeld via %{kind}."
+  errors:
+    messages:
+      equal_to_current_password: "Dit wachtwoord moet anders zijn dan het vorige wachtwoord"
