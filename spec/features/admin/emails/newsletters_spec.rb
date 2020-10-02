@@ -150,7 +150,7 @@ describe "Admin newsletter emails" do
 
   context "Send newsletter", :js do
     scenario "Sends newsletter emails", :js do
-      newsletter = create(:newsletter)
+      newsletter = create(:newsletter, segment_recipient: "administrators")
       visit admin_newsletter_path(newsletter)
 
       accept_confirm { click_link "Send" }
