@@ -23,7 +23,9 @@ nl:
     confirmations:
       confirmed: "Je account is geactiveerd"
       send_instructions: "Je ontvangt via e-mail instructies om jouw account te activeren"
-      send_paranoid_instructions: "Als je e-mailadres bij ons bekend is, ontvang je hierop instructies hoe je jouw account kunt activeren"
+      send_paranoid_instructions: "We hebben een nieuwe link verstuurd. Heb je niets ontvangen? Neem dan contact op met <a href=\"mailto:destemvan@groningen.nl\">destemvan@groningen.nl</a>"
+      user:
+        already_confirmed: "Je mailadres is al geverifieerd. Je kunt hiermee nu inloggen. Lukt dit niet? Neem dan contact op met <a href='mailto:destemvan@groningen.nl'>destemvan@groningen.nl</a>"
     failure:
       already_authenticated: "Je bent al aangemeld"
       inactive: "Je account is nog niet geactiveerd"
