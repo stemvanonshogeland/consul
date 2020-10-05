@@ -12,6 +12,7 @@ en:
       links:
         new_confirmation: "Haven't received instructions to activate your account? %{link}"
         new_confirmation_link: "Click here"
+        not_received: "Didn't receive a link in your mail? Maybe it came in your spam folder. Didn't it? Please contact <a href=\"mailto:destemvan@groningen.nl\">destemvan@groningen.nl</a>."
     confirmations:
       new:
         description: "Didn't receive a link? Maybe it ended up in your spam folder. You can use the button below to have the mail resent."

@@ -408,6 +408,9 @@ describe "Users" do
     click_link "Sign in"
     click_link "Forgotten your password?"
 
+    expect(page).to have_content "Didn't receive a link in your mail? Maybe it came in your spam folder. "\
+                                 "Didn't it? Please contact destemvan@groningen.nl."
+
     fill_in "user_email", with: "manuela@consul.dev"
     click_button "Send instructions"
 

@@ -20,6 +20,7 @@ nl:
         new_confirmation: "Heb je geen link ontvangen in je mail? Misschien is deze in je spamfolder gekomen. Ook niet? %{link}."
         new_confirmation_link: "Klik dan hier"
         login: "Inloggen"
+        not_received: "Heb je geen link ontvangen in je mail? Misschien is deze in je spamfolder gekomen. Ook niet? Neem dan contact op met <a href=\"mailto:destemvan@groningen.nl\">destemvan@groningen.nl</a>."
     organizations:
       registrations:
         new:
