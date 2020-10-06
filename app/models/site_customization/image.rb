@@ -11,7 +11,8 @@ class SiteCustomization::Image < ApplicationRecord
     "header_homepage" => [500, 400],
     "welcome/step_1" => [270, 240],
     "welcome/step_2" => [270, 240],
-    "welcome/step_3" => [270, 240]
+    "welcome/step_3" => [270, 240],
+    "bg_footer" => [1200, 300]
   }.freeze
 
   has_attached_file :image
