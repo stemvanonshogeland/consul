@@ -8,7 +8,10 @@ class SiteCustomization::Image < ApplicationRecord
     "budget_no_image" => [400, 300],
     "map" => [420, 500],
     "logo_email" => [400, 80],
-    "header_homepage" => [500, 400]
+    "header_homepage" => [500, 400],
+    "welcome/step_1" => [270, 240],
+    "welcome/step_2" => [270, 240],
+    "welcome/step_3" => [270, 240]
   }.freeze
 
   has_attached_file :image
