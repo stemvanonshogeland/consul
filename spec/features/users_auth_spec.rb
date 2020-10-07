@@ -408,6 +408,9 @@ describe "Users" do
     click_link "Sign in"
     click_link "Forgotten your password?"
 
+    expect(page).to have_content "Didn't receive a link in your mail? Maybe it came in your spam folder. "\
+                                 "Didn't it? Please contact destemvan@groningen.nl."
+
     fill_in "user_email", with: "manuela@consul.dev"
     click_button "Send instructions"
 
@@ -438,7 +441,7 @@ describe "Users" do
   end
 
   scenario "Re-send confirmation instructions" do
-    create(:user, email: "manuela@consul.dev")
+    create(:user, email: "manuela@consul.dev", confirmed_at: nil)
 
     visit "/"
     click_link "Sign in"
@@ -465,6 +468,20 @@ describe "Users" do
     expect(page).to have_content "If your email address is in our database, in a few minutes you "\
                                  "will receive an email containing instructions on how to reset "\
                                  "your password."
+  end
+
+  scenario "Re-send confirmation instructions with already verified email" do
+    create(:user, email: "manuela@consul.dev")
+
+    visit "/"
+    click_link "Sign in"
+    expect(page).to have_content "Haven't received instructions to activate your account?"
+    click_link "Click here"
+
+    fill_in "user_email", with: "manuela@consul.dev"
+    click_button "Re-send instructions"
+
+    expect(page).to have_content "You have already confirmed your email account."
   end
 
   scenario "Sign in, admin with password expired" do
