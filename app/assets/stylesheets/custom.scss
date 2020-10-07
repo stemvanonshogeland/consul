@@ -914,19 +914,7 @@ footer {
 .subfooter {
   border-top: 0;
   font-size: $base-font-size;
-  margin-top: $line-height * 12;
   padding: $line-height 0;
-  position: relative;
-
-  &::before {
-    background-image: image-url("bg_footer.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 311px;
-    position: absolute;
-    top: -276px;
-    width: 100%;
-  }
 
   ul {
     padding-left: $line-height / 4;
@@ -2452,7 +2440,8 @@ footer {
   }
 
   .auth-image {
-    background: $brand image-url("auth_bg.png");
+    background-color: transparent;
+    background-size: auto;
 
     @include breakpoint(medium) {
       min-height: rem-calc(1390);

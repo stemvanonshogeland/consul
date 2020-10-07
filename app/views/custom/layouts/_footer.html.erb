@@ -28,6 +28,10 @@
   </div>
 
   <div class="subfooter row">
+    <div class="margin">
+      <%= image_tag(image_path_for("bg_footer.png"), alt: "") %>
+    </div>
+
     &copy; <%= t("layouts.footer.copyright", year: Time.current.year) %> - 1.1.0
     <ul class="no-bullet">
       <li><%= link_to t("layouts.footer.privacy"), page_path("privacy") %>&nbsp;|</li>
