@@ -1,8 +1,4 @@
 module ImageablesHelper
-  def can_destroy_image?(imageable)
-    imageable.image.present? && can?(:destroy, imageable.image)
-  end
-
   def imageable_max_file_size
     bytes_to_megabytes(Setting["uploads.images.max_size"].to_i.megabytes)
   end
