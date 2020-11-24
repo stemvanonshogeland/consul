@@ -624,6 +624,7 @@ header {
 
 .home-page .card,
 .custom-page .card {
+  flex-grow: initial;
   margin-top: $line-height;
 
   figure {
