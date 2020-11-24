@@ -136,7 +136,7 @@ nl:
         tags_placeholder: "Voer de categorie in die je wilt gebruiken, gescheiden door kommas (',')"
       investment:
         price_title: "Prijs"
-        support_title: "Stemmen"
+        support_title: "Steunbetuigingen"
         give_support: "Steunen"
         remove_support: "Steun verwijderen"
         supports:
