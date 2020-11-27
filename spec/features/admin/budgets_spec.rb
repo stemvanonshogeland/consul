@@ -427,6 +427,24 @@ describe "Admin budgets" do
       expect(page).to have_content("Budget deleted successfully")
       expect(page).to have_content("There are no budgets.")
     end
+
+    scenario "Allow to delete a budget with administrators or valuators assigned", :js do
+      admin = create(:administrator)
+      valuator = create(:valuator)
+
+      budget = create(:budget, administrators: [admin], valuators: [valuator])
+
+      visit admin_budgets_path
+
+      within "#budget_#{budget.id}" do
+        click_link "Delete budget"
+      end
+
+      accept_confirm
+
+      expect(page).to have_content("Budget deleted successfully")
+      expect(page).not_to have_content(budget.name)
+    end
   end
 
   context "Edit" do
