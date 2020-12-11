@@ -20,7 +20,7 @@ nl:
       sincerely: "Groeten van Stem van Groningen"
       thanks: "Bedankt voor het meedoen."
     budget_investment_unfeasible:
-      subject: "Helaas, uw idee is onhaalbaar"
+      subject: "Helaas, jouw idee is niet haalbaar"
       hi: "Beste deelnemer,"
       new: "De gemeente Groningen heeft naar je idee gekeken. Helaas blijkt dat je idee niet haalbaar is. We leggen %{url} ook uit waarom."
       new_href: " hier"
