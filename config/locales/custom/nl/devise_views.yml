@@ -40,7 +40,7 @@ nl:
           organization_signup: "Vertegenwoordig je een organisatie of een collectief? Registreer je dan %{signup_link}."
           organization_signup_link: "hier"
           username_note: "De opgegeven naam zal zichtbaar zijn voor andere gebruikers"
-          terms: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de %{terms}."
+          terms: "Ik ben een inwoner van de gemeente en ik accepteer de %{terms}."
           terms_link: "gebruiksvoorwaarden"
           terms_title: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de gebruiksvoorwaarden"
           submit: "Registreren"
