@@ -600,6 +600,11 @@ header {
       padding-bottom: 0;
       padding-top: 0;
     }
+
+    a {
+      padding-left: $line-height / 2;
+      padding-right: $line-height;
+    }
   }
 
   .dropdown .is-dropdown-submenu {
