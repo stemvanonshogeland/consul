@@ -75,9 +75,7 @@
                    data-legislation-annotatable-base-url="<%= legislation_process_draft_version_path(@process, @draft_version) %>"
                    data-legislation-open-phase="<%= @process.allegations_phase.open? %>">
           <% end %>
-            <%= sanitize(@draft_version.body_html, {
-                         tags: %w[p ul ol li img strong em u s a h1 h2 h3 table thead tbody tr th td],
-                         attributes: ["id", "href", "src", "target", "style"]}) %>
+            <%= AdminLegislationSanitizer.new.sanitize(@draft_version.body_html) %>
           </section>
         </div>
       </div>
