@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200625133207) do
+ActiveRecord::Schema.define(version: 20201201100342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -892,8 +892,16 @@ ActiveRecord::Schema.define(version: 20200625133207) do
     t.integer "zoom"
     t.integer "proposal_id"
     t.integer "investment_id"
+    t.integer "map_id"
     t.index ["investment_id"], name: "index_map_locations_on_investment_id", using: :btree
     t.index ["proposal_id"], name: "index_map_locations_on_proposal_id", using: :btree
+  end
+
+  create_table "maps", force: :cascade do |t|
+    t.integer  "budget_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["budget_id"], name: "index_maps_on_budget_id", using: :btree
   end
 
   create_table "milestone_statuses", force: :cascade do |t|
