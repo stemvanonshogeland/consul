@@ -225,28 +225,6 @@ describe "Admin settings" do
       expect(page).to have_css("div#tab-configuration.is-active")
     end
 
-    context "map configuration" do
-      before do
-        Setting["feature.map"] = true
-      end
-
-      scenario "On #tab-map-configuration", :js do
-        map_setting = Setting.create!(key: "map.whatever")
-        admin = create(:administrator).user
-        login_as(admin)
-        visit admin_settings_path
-        find("#map-tab").click
-
-        within("#edit_setting_#{map_setting.id}") do
-          fill_in "setting_#{map_setting.id}", with: "New value"
-          click_button "Update"
-        end
-
-        expect(page).to have_current_path(admin_settings_path)
-        expect(page).to have_css("div#tab-map-configuration.is-active")
-      end
-    end
-
     scenario "On #tab-proposals", :js do
       proposal_dashboard_setting = Setting.create!(key: "proposals.whatever")
       admin = create(:administrator).user
