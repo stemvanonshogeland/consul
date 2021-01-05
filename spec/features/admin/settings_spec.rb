@@ -30,74 +30,6 @@ describe "Admin settings" do
     expect(page).to have_content "Value updated"
   end
 
-  describe "Update map" do
-    scenario "Should not be able when map feature deactivated" do
-      Setting["feature.map"] = false
-      admin = create(:administrator).user
-      login_as(admin)
-      visit admin_settings_path
-      find("#map-tab").click
-
-      expect(page).to have_content "To show the map to users you must enable " \
-                                   '"Proposals and budget investments geolocation" ' \
-                                   'on "Features" tab.'
-      expect(page).not_to have_css("#admin-map")
-    end
-
-    scenario "Should be able when map feature activated" do
-      Setting["feature.map"] = true
-      admin = create(:administrator).user
-      login_as(admin)
-      visit admin_settings_path
-      find("#map-tab").click
-
-      expect(page).to have_css("#admin-map")
-      expect(page).not_to have_content "To show the map to users you must enable " \
-                                       '"Proposals and budget investments geolocation" ' \
-                                       'on "Features" tab.'
-    end
-
-    scenario "Should show successful notice" do
-      Setting["feature.map"] = true
-      admin = create(:administrator).user
-      login_as(admin)
-      visit admin_settings_path
-
-      within "#map-form" do
-        click_on "Update"
-      end
-
-      expect(page).to have_content "Map configuration updated succesfully"
-    end
-
-    scenario "Should display marker by default", :js do
-      Setting["feature.map"] = true
-      admin = create(:administrator).user
-      login_as(admin)
-
-      visit admin_settings_path
-
-      expect(find("#latitude", visible: false).value).to eq "51.48"
-      expect(find("#longitude", visible: false).value).to eq "0.0"
-    end
-
-    scenario "Should update marker", :js do
-      Setting["feature.map"] = true
-      admin = create(:administrator).user
-      login_as(admin)
-
-      visit admin_settings_path
-      find("#map-tab").click
-      find("#admin-map").click
-      within "#map-form" do
-        click_on "Update"
-      end
-
-      expect(find("#latitude", visible: false).value).not_to eq "51.48"
-      expect(page).to have_content "Map configuration updated succesfully"
-    end
-  end
-
   describe "Update content types" do
     scenario "stores the correct mime types" do
       setting = Setting.create!(key: "upload.images.content_types", value: "image/png")
@@ -199,28 +131,6 @@ describe "Admin settings" do
 
       expect(page).to have_current_path(admin_settings_path)
       expect(page).to have_css("div#tab-configuration.is-active")
-    end
-
-    context "map configuration" do
-      before do
-        Setting["feature.map"] = true
-      end
-
-      scenario "On #tab-map-configuration", :js do
-        map_setting = Setting.create!(key: "map.whatever")
-        admin = create(:administrator).user
-        login_as(admin)
-        visit admin_settings_path
-        find("#map-tab").click
-
-        within("#edit_setting_#{map_setting.id}") do
-          fill_in "setting_#{map_setting.id}", with: "New value"
-          click_button "Update"
-        end
-
-        expect(page).to have_current_path(admin_settings_path)
-        expect(page).to have_css("div#tab-map-configuration.is-active")
-      end
     end
 
     scenario "On #tab-proposals", :js do

@@ -258,6 +258,10 @@
         <li <%= "class=is-active" if submenu_local_census_records? %>>
           <%= link_to t("admin.menu.local_census_records"), admin_local_census_records_path %>
         </li>
+
+        <li <%= "class=is-active" if controller_name == "maps" %>>
+          <%= link_to t("admin.menu.maps"), admin_maps_path %>
+        </li>
       </ul>
     </li>
     <li class="section-title">
