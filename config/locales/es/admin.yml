@@ -477,6 +477,7 @@ es:
           filters:
             pending: Pendientes
             done: Resueltos
+          deleted_proposal: "Esta propuesta ha sido eliminada"
         edit:
           back: Volver a la lista de tareas pendientes
           solving: Resolver tarea pendiente
