@@ -35,6 +35,6 @@ class Widget::Feed < ApplicationRecord
   end
 
   def budgets
-    Budget.published.order("created_at DESC").limit(limit)
+    Budget.open.published.order("created_at DESC").limit(limit)
   end
 end
