@@ -2,9 +2,11 @@ require "rails_helper"
 
 describe "Welcome page" do
   context "Feeds" do
-    scenario "Show published budgets info" do
-      budget = create(:budget)
-      draft = create(:budget, :drafting, :informing)
+    scenario "Show open published budgets info" do
+      budget = create(:budget, :accepting)
+      finished = create(:budget, :finished)
+      draft = create(:budget, :drafting)
+      draft.current_phase.update!(description: "Budget in draft mode")
 
       visit root_path
 
@@ -21,6 +23,9 @@ describe "Welcome page" do
         expect(page).not_to have_content draft.name
         expect(page).not_to have_content draft.description
         expect(page).not_to have_link href: budget_path(draft)
+        expect(page).not_to have_content finished.name
+        expect(page).not_to have_content finished.description
+        expect(page).not_to have_link href: budget_path(finished)
       end
     end
   end
