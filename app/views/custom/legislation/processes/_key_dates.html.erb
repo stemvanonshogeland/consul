@@ -22,12 +22,8 @@
                 <%= t("legislation.processes.shared.debate_dates") %>
                 <span>(<%= process.questions.count %>)</span>
               </h4>
-              <span>
-                <%= format_date(process.debate_start_date) %> -
-                <%= format_date(process.debate_end_date) %>
-              </span>
-              <% debate_phase_status = phase_status(process, "debate") %>
-              <span class="date-status <%= debate_phase_status %>"><%= debate_phase_status %></span>
+              <%= render "legislation/processes/phase_dates", process: process, phase: "debate" %>
+              <%= render "legislation/processes/phase_status", process: process, phase: "debate" %>
             <% end %>
           </li>
         <% end %>
@@ -39,12 +35,8 @@
                 <%= t("legislation.processes.shared.proposals_dates") %>
                 <span>(<%= process.proposals.count %>)</span>
               </h4>
-              <span>
-                <%= format_date(process.proposals_phase_start_date) %> -
-                <%= format_date(process.proposals_phase_end_date) %>
-              </span>
-              <% proposals_phase_status = phase_status(process, "proposals") %>
-              <span class="date-status <%= proposals_phase_status %>"><%= proposals_phase_status %></span>
+              <%= render "legislation/processes/phase_dates", process: process, phase: "proposals" %>
+              <%= render "legislation/processes/phase_status", process: process, phase: "proposals" %>
             <% end %>
           </li>
         <% end %>
@@ -60,12 +52,8 @@
                   <span>(0)</span>
                 <% end %>
               </h4>
-              <span>
-                <%= format_date(process.allegations_start_date) %> -
-                <%= format_date(process.allegations_end_date) %>
-              </span>
-              <% allegations_phase_status = phase_status(process, "allegations") %>
-              <span class="date-status <%= allegations_phase_status %>"><%= allegations_phase_status %></span>
+              <%= render "legislation/processes/phase_dates", process: process, phase: "allegations" %>
+              <%= render "legislation/processes/phase_status", process: process, phase: "allegations" %>
             <% end %>
           </li>
         <% end %>
@@ -77,6 +65,15 @@
               <% if process.milestones.any? %>
                 <span><%= format_date(process.milestones.order_by_publication_date.last.publication_date) %></span>
               <% end %>
+            <% end %>
+          </li>
+        <% end %>
+
+        <% if can?(:summary, process) %>
+          <li <%= "class=is-active" if phase == :summary %>>
+            <%= link_to summary_legislation_process_path(process) do %>
+              <h4><%= t("legislation.summary.title") %></h4>
+              <span><%= format_date(process.result_publication_date) %></span>
             <% end %>
           </li>
         <% end %>

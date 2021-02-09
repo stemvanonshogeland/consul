@@ -64,6 +64,7 @@ nl:
     show:
       author: "Auteur"
       comments_title: "Reacties"
+      edit_debate_link: "Bewerk"
     edit:
       editing: "Discussie bewerken"
       show_link: "Discussie bekijken"
@@ -313,6 +314,10 @@ nl:
     supports: "Steun"
     budget_investments:
       not_verified: "Alleen geverifieerde gebruikers mogen stemmen op ideeën; %{verify_account}."
+      different_heading_assigned:
+        one: "Je kan ideeën in %{count} groep steunen. Je hebt al ideeën gesteund in de groep %{supported_headings}."
+        other: "Je kan ideeën in %{count} groep steunen. Je hebt al ideeën gesteund in de groep %{supported_headings}."
+    organizations: "Collectieven en verenigingen kunnen niet stemmen."
   welcome:
     steps:
       title: "Doe mee in drie stappen"

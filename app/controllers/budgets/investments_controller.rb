@@ -12,12 +12,13 @@ module Budgets
     before_action :authenticate_user!, except: [:index, :show, :json_data]
     before_action :load_budget, except: :json_data
 
-    load_and_authorize_resource :budget, except: :json_data
+    authorize_resource :budget, except: :json_data
     load_and_authorize_resource :investment, through: :budget, class: "Budget::Investment",
                                 except: :json_data
 
     before_action :load_ballot, only: [:index, :show]
     before_action :load_heading, only: [:index, :show]
+    before_action :load_assigned_heading, only: [:show]
     before_action :set_random_seed, only: :index
     before_action :load_categories, only: [:index, :new, :create, :edit, :update]
     before_action :load_budget_map, only: [:new, :edit]
@@ -149,9 +150,13 @@ module Budgets
       def load_heading
         if params[:heading_id].present?
           @heading = @budget.headings.find_by_slug_or_id! params[:heading_id]
-          @assigned_heading = @ballot&.heading_for_group(@heading&.group)
+          @assigned_heading = @ballot&.heading_for_group(@heading.group)
           load_map
         end
+      end
+
+      def load_assigned_heading
+        @assigned_heading = @ballot&.heading_for_group(@investment.heading.group)
       end
 
       def load_categories

@@ -37,7 +37,9 @@ Rails.application.routes.draw do
   resources :remote_translations, only: [:create]
 
   # More info pages
-  get "help",             to: "pages#show", id: "vragen",                 as: "help"
+  help_page_id = Rails.env.test? ? "help/index" : "vragen"
+  get "help",             to: "pages#show", id: help_page_id,             as: "help"
+
   get "help/how-to-use",  to: "pages#show", id: "help/how_to_use/index",  as: "how_to_use"
   get "help/faq",         to: "pages#show", id: "faq",                    as: "faq"
 

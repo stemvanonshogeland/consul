@@ -28,6 +28,11 @@ nl:
           responsible_name_note: "Dit is de persoon die namens de vereniging of het collectief initiatieven indient"
           title: "Als organisatie of collectief registreren."
           submit: "Registreren"
+        success:
+          instructions_1: "Wij nemen zo snel mogelijk contact met je op om het collectief of de vereniging te verifiëren."
+          instructions_2: "We hebben een mail met een bevestigingslink gestuurd naar het opgegeven e-mailadres."
+          instructions_3: "Klik op de link om het account te bevestigen. Hierna kun je als collectief of vereniging meedoen op Stem van Groningen."
+          thank_you: "Bedankt voor het registreren als collectief of vereniging op de website."
     sessions:
       new:
         submit: "Inloggen"
@@ -40,7 +45,7 @@ nl:
           organization_signup: "Vertegenwoordig je een organisatie of een collectief? Registreer je dan %{signup_link}."
           organization_signup_link: "hier"
           username_note: "De opgegeven naam zal zichtbaar zijn voor andere gebruikers"
-          terms: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de %{terms}."
+          terms: "Ik ben een inwoner van de gemeente en ik accepteer de %{terms}."
           terms_link: "gebruiksvoorwaarden"
           terms_title: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de gebruiksvoorwaarden"
           submit: "Registreren"
