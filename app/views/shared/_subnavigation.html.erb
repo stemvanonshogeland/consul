@@ -30,14 +30,7 @@
       </li>
     <% end %>
     <% if feature?(:budgets) %>
-      <li>
-        <%= layout_menu_link_to t("layouts.header.budgets"),
-                                  budgets_path,
-                                  controller_name == "budgets" || controller_name == "investments",
-                                  accesskey: "5",
-                                  title: t("shared.go_to_page") + t("layouts.header.budgets") %>
-        <%= render "shared/budgets_links" %>
-      </li>
+      <%= render "shared/budgets_links" %>
     <% end %>
     <% if feature?(:legislation) %>
       <li>
