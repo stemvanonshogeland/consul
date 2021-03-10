@@ -9,12 +9,7 @@
     <div class="small-12 column">
       <div class="small-12 medium-8 column">
         <p>
-          <% if namespace == "legislation" %>
-            <%= sanitize(t("#{i18n_namespace}.description",
-                            link: link_to(t("#{i18n_namespace}.description_link"), budgets_path))) %>
-          <% else %>
-            <%= t("#{i18n_namespace}.description") %>
-          <% end %>
+          <%= t("#{i18n_namespace}.description") %>
         </p>
       </div>
       <div class="small-12 medium-4 column text-right">
