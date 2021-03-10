@@ -26,8 +26,7 @@ nl:
           icon_alt: "Inspraak icoon"
           title: "Inspraak"
           help: "Hulp bij inspraak"
-          description: "Ben je op zoek naar ideeën voor de Groene Parel? Klik dan %{link}<br>Hieronder staan (een aantal) plannen van de gemeente Groningen, waar een officiële inspraakprocedure voor is georganiseerd. Afhankelijk van het soort plan kun je opmerkingen maken op het document, discussies starten of voorstellen indienen."
-          description_link: "hier"
+          description: "Hieronder staan plannen van de gemeente Groningen, waar een officiële inspraakprocedure voor is georganiseerd. Afhankelijk van het soort plan kun je opmerkingen maken op een document, discussies starten of initiatieven indienen."
         section_footer:
           title: "Hulp bij inspraak"
       process:
