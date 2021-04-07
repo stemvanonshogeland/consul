@@ -183,7 +183,7 @@ nl:
         change_ballot: "Als je je bedenkt kun je je stemmen in %{check_ballot} verwijderen en opnieuw beginnen."
         different_heading_assigned: "Je hebt al gestemd in een andere groep: %{heading_link}"
       share:
-        message: "Dit is een goed idee voor de Groene Parel!"
+        message: "Ik vind dit een goed idee!"
       new:
         recommendations_title: "Beschrijf:"
         recommendation_one: "waarom het een goed idee is"
