@@ -210,7 +210,7 @@ class Budget < ApplicationRecord
     when "accepting", "reviewing"
       %w[random]
     when "publishing_prices", "balloting", "reviewing_ballots"
-      %w[random price]
+      hide_money? ? %w[random] : %w[random price]
     when "finished"
       %w[random]
     else
@@ -261,6 +261,10 @@ class Budget < ApplicationRecord
     else
       open.published.order(:created_at)
     end
+  end
+
+  def show_money?
+    !hide_money?
   end
 
   private
