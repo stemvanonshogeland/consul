@@ -1621,6 +1621,8 @@ footer {
 
 .draft-panels .comments-on .calc-comments .comments-box-container {
   margin-top: $line-height * 2;
+  height: 100%;
+  position: relative;
 }
 
 .comment-box {
@@ -1644,6 +1646,7 @@ footer {
 
   .cancel-comment {
     color: $brand !important;
+    font-size: $small-font-size;
     text-decoration: none !important;
   }
 
