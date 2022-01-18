@@ -4,7 +4,7 @@
   </h1>
 
   <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif;font-size: 14px;font-weight: normal;line-height: 24px;">
-    <%= t("mailers.user_invite.text") %>
+    <%= t("mailers.user_invite.text", org: Setting["org_name"]) %>
   </p>
 
   <p style="text-align: center;">

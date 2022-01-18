@@ -5,7 +5,7 @@ nl:
         title: "Bevestig je account door de volgende link te gebruiken"
         confirm_link: "Klik op %{link} om de registratie van je account af te ronden."
         link: "deze link"
-        text: "Met deze email registreer je je account voor de Stem van Groningen. Als je dit niet hebt aangevraagd, klik dan niet op de link en negeer deze mail."
+        text: "Met deze email registreer je je account. Als je dit niet hebt aangevraagd, klik dan niet op de link en negeer deze mail."
     menu:
       login_items:
         login: "Inloggen"
@@ -20,7 +20,7 @@ nl:
         new_confirmation: "Heb je geen link ontvangen in je mail? Misschien is deze in je spamfolder gekomen. Ook niet? %{link}."
         new_confirmation_link: "Klik dan hier"
         login: "Inloggen"
-        not_received: "Heb je geen link ontvangen in je mail? Misschien is deze in je spamfolder gekomen. Ook niet? Neem dan contact op met <a href=\"mailto:destemvan@groningen.nl\">destemvan@groningen.nl</a>."
+        not_received: "Heb je geen link ontvangen in je mail? Misschien is deze in je spamfolder gekomen"
     organizations:
       registrations:
         new:
@@ -31,7 +31,7 @@ nl:
         success:
           instructions_1: "Wij nemen zo snel mogelijk contact met je op om het collectief of de vereniging te verifiëren."
           instructions_2: "We hebben een mail met een bevestigingslink gestuurd naar het opgegeven e-mailadres."
-          instructions_3: "Klik op de link om het account te bevestigen. Hierna kun je als collectief of vereniging meedoen op Stem van Groningen."
+          instructions_3: "Klik op de link om het account te bevestigen. Hierna kun je als collectief of vereniging meedoen."
           thank_you: "Bedankt voor het registreren als collectief of vereniging op de website."
     sessions:
       new:
@@ -47,7 +47,7 @@ nl:
           username_note: "De opgegeven naam zal zichtbaar zijn voor andere gebruikers"
           terms: "Ik ben een inwoner van de gemeente en ik accepteer de %{terms}."
           terms_link: "gebruiksvoorwaarden"
-          terms_title: "Ik ben een inwoner van de gemeente Groningen en ik accepteer de gebruiksvoorwaarden"
+          terms_title: "Ik accepteer de gebruiksvoorwaarden"
           submit: "Registreren"
           username_label: "Gebruikersnaam"
           username_note: "De opgegeven naam zal zichtbaar zijn voor andere gebruikers"

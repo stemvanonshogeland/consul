@@ -10,7 +10,7 @@ nl:
         processes: "Open plannen"
       debates:
         title: "Discussies"
-        description: "Bij het onderdeel %{link} deel en bespreek je je mening met anderen. Ook kun je hier een initiatief delen, dat via andere onderdelen op %{org} tot concrete acties van de gemeente kan leiden."
+        description: "Bij het onderdeel %{link} deel en bespreek je je mening met anderen. Ook kun je hier een initiatief delen, dat via andere onderdelen op %{org} tot concrete acties kan leiden."
         link: "discussie"
         feature: "Je kan een discussie starten, reageren op berichten en aangeven met welke berichten je het (on)eens bent. Om dit te kunnen doen, moet je je wel eerst %{link}."
         feature_link: "registreren"
