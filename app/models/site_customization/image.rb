@@ -5,6 +5,7 @@ class SiteCustomization::Image < ApplicationRecord
     "social_media_icon_twitter" => [246, 246],
     "apple-touch-icon-200" => [200, 200],
     "budget_execution_no_image" => [800, 600],
+    "budget_investment_no_image" => [800, 600],
     "budget_no_image" => [400, 300],
     "map" => [420, 500],
     "logo_email" => [400, 80],
@@ -13,13 +14,21 @@ class SiteCustomization::Image < ApplicationRecord
     "welcome/step_2" => [270, 240],
     "welcome/step_3" => [270, 240],
     "bg_footer" => [1200, 300],
-    "auth_bg" => [934, 1398]
+    "auth_bg" => [934, 1398],
+    "favicon" => [16, 16]
   }.freeze
+
+  VALID_MIME_TYPES = %W[
+    image/png
+    image/jpeg
+    image/x-icon
+    image/vnd.microsoft.icon
+  ]
 
   has_attached_file :image
 
   validates :name, presence: true, uniqueness: true, inclusion: { in: VALID_IMAGES.keys }
-  validates_attachment_content_type :image, content_type: ["image/png", "image/jpeg"]
+  validates_attachment_content_type :image, content_type: VALID_MIME_TYPES
   validate :check_image
 
   def self.all_images
