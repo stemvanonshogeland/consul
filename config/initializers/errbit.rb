@@ -5,6 +5,10 @@ Airbrake.configure do |config|
 
   config.environment = Rails.env
   config.ignore_environments = %w[development test]
+
+  if config.host.blank? || config.project_id.blank? || config.project_key.blank?
+    config.ignore_environments += [Rails.env]
+  end
 end
 
 Airbrake.add_filter do |notice|
