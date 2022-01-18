@@ -7,6 +7,14 @@ module Consul
     config.logger = logger
     config.assets.initialize_on_precompile = false
 
+    config.x.theme.current = ENV["THEME"]
+    config.x.theme.load_path = Rails.root.join(
+      "app",
+      "assets",
+      "stylesheets",
+      "themes"
+    )
+
     config.after_initialize do
       Delayed::Worker.logger = logger
     end

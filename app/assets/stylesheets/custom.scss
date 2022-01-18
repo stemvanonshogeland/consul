@@ -18,24 +18,14 @@
 // 0. Global styles
 // --------------------
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+// Note: this seems to overwrite styles of base.scss,
+// which in itself is a custom stylesheet not included
+// in a default Consul install
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-a {
-  font-family: "Montserrat", sans-serif !important;
-}
-
-.button {
-  min-height: $line-height * 2;
-}
+// This expands upon styles in base.scss,
+// which expands upon styles in layout.scss
 
 .input-group-button {
-
   button,
   .button {
     border-bottom-right-radius: rem-calc(4) !important;
@@ -80,8 +70,11 @@ main {
 }
 
 .button {
+  background: $brand-light;
+  min-height: $line-height * 2;
 
   &:hover {
+    background: darken($brand-light, 20%);
     background: $hover;
   }
 
@@ -154,7 +147,7 @@ aside {
         position: relative;
 
         &::after {
-          border-bottom: 4px solid $brand;
+          border-bottom: 4px solid $title-border;
           bottom: -4px;
           content: "";
           position: absolute;
@@ -170,18 +163,24 @@ aside {
   border-bottom: 4px solid $light;
   margin-bottom: $line-height;
 
+  *::selection {
+    color: inherit;
+    background: none;
+  }
+
   li {
     display: inline-block;
     margin-right: 0;
 
-    a {
+    a, a * {
+      color: $brand-light;
 
       &.is-active {
         border-bottom: 0;
         position: relative;
 
         &::after {
-          border-bottom: 4px solid $brand;
+          border-bottom: 4px solid $title-border;
           bottom: -4px;
           content: "";
           position: absolute;
@@ -194,7 +193,7 @@ aside {
 }
 
 .section-help {
-  background: $highlight-soft;
+  background: $brand-secondary;
   margin: $line-height * 2 0;
   padding: $line-height / 2;
 
@@ -363,7 +362,7 @@ aside {
 
       &[aria-selected="true"]::after,
       .is-active::after {
-        border-bottom: 4px solid $brand;
+        border-bottom: 4px solid $title-border;
         bottom: -4px;
       }
     }
@@ -430,14 +429,15 @@ header {
 .top-bar {
   background: #fff !important;
 
-  .menu > li {
-
-    a,
-    .button {
-      background: none;
-      border: 0;
-      color: $text;
-      min-height: 0;
+  .subnavigation {
+    .menu > li {
+      a,
+      .button {
+        background: none;
+        border: 0;
+        color: #fff;
+        min-height: 0;
+      }
     }
   }
 
@@ -448,35 +448,6 @@ header {
       &.is-active > a {
         color: $text;
       }
-    }
-  }
-}
-
-.top-bar-title {
-  background: $brand;
-  margin: 0;
-  position: relative;
-
-  @include breakpoint(medium) {
-    padding-bottom: $line-height;
-    padding-top: $line-height * 2;
-  }
-
-  &::before {
-    background: $brand;
-    content: "";
-    height: 100%;
-    left: -999%;
-    position: absolute;
-    top: 0;
-    width: 999%;
-    z-index: -1;
-  }
-
-  a {
-
-    img {
-      height: 100% !important;
     }
   }
 }
@@ -517,41 +488,23 @@ header {
   }
 }
 
-.menu-icon.dark::after,
-.menu-icon.dark:hover::after {
-  background: $brand;
-  box-shadow: 0 7px 0 $brand, 0 14px 0 $brand;
-}
-
 .subnavigation {
-  background: $light;
-  padding: $line-height / 2 0;
-}
+  background: $brand;
 
-.subnavigation a {
-  color: $text;
-  position: relative;
+  a {
+    color: #fff;
 
-  @include breakpoint(medium) {
+    @include breakpoint(medium) {
 
+      &.is-active::after {
+        background: #fff;
+      }
+    }
+
+    &:hover,
     &.is-active {
-      border-bottom: 0;
+      color: #fff;
     }
-
-    &.is-active::after {
-      background: $brand;
-      bottom: -12px;
-      content: "";
-      height: 4px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-    }
-  }
-
-  &:hover,
-  &.is-active {
-    color: $brand;
   }
 }
 
@@ -592,7 +545,12 @@ header {
       }
     }
 
+    // This should match what's in layout.scss
     &.is-active > a {
+      color: #fff;
+    }
+
+    &.is-active .submenu a {
       color: $brand;
     }
 
@@ -679,6 +637,7 @@ header {
 
     &.title {
       border-bottom: 0;
+      border-top: 4px solid $title-border;
     }
   }
 }
@@ -694,7 +653,7 @@ header {
   }
 
   a {
-    background: $light;
+    background: $brand-secondary;
     border: 2px solid #fff;
     border-radius: rem-calc(12);
     color: $text;
@@ -716,8 +675,9 @@ header {
 
     &:last-child {
       bottom: 0;
-      color: $brand;
+      color: $text;
       text-align: right;
+      text-decoration: underline;
     }
   }
 
@@ -753,7 +713,7 @@ header {
   }
 
   .phase {
-    color: $brand;
+    color: $text;
     font-size: $tiny-font-size;
     font-weight: bold;
     margin-bottom: 0;
@@ -788,7 +748,7 @@ header {
     position: relative;
 
     &::after {
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $light 50%);
+      background: linear-gradient(to bottom, rgba($brand-secondary, 0), rgba($brand-secondary, 1) 50%);
       bottom: 0;
       content: "";
       height: 24px;
@@ -801,6 +761,7 @@ header {
       color: $text;
       padding: 0;
       text-align: left;
+      text-decoration: none;
     }
   }
 }
@@ -941,10 +902,11 @@ footer {
 }
 
 .footer {
-  background: #2d313b;
+  background: $brand;
   padding-top: $line-height * 3;
 
   .footer-title {
+    color: $brand-secondary;
     margin: $line-height 0;
   }
 
@@ -957,14 +919,14 @@ footer {
   .social {
 
     [class^="fa"] {
-      color: $footer;
+      color: #fff;
       font-size: rem-calc(40);
       text-align: center;
       width: rem-calc(60);
     }
 
     a {
-      color: $footer;
+      color: #fff;
       display: inline-block;
       font-size: rem-calc(20);
       line-height: rem-calc(40);
@@ -1001,7 +963,7 @@ footer {
     background: $brand;
 
     &:not(.button) .button {
-      background: rgba(0 , 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.5);
       color: #fff;
       min-width: 30%;
     }
@@ -1012,40 +974,41 @@ footer {
 
   .tabs-title > a {
 
-    &.current-phase {
-      background: $brand-secondary;
+    &:hover {
+      background: $brand;
       color: #fff;
 
       &::after {
-        border-left-color: $brand-secondary;
+        border-left-color: $brand;
       }
+    }
 
-      &:hover {
-        background: $dark;
+    &.current-phase {
+      background: $brand-light;
+      color: #fff;
 
-        &::after {
-          border-left-color: $dark;
-        }
+      &::after {
+        border-left-color: $brand-light;
       }
     }
 
     &[aria-selected="true"],
     &.is-active {
-      background: $dark;
+      background: $brand;
       color: #fff;
 
       &::after {
-        border-left-color: $dark;
+        border-left-color: $brand;
       }
     }
 
     &[aria-selected="true"] {
 
       &.current-phase {
-        background: $brand-secondary;
+        background: $brand-light;
 
         &::after {
-          border-left-color: $brand-secondary;
+          border-left-color: $brand-light;
         }
       }
     }
@@ -1055,7 +1018,7 @@ footer {
   .budget-next-phase {
 
     &::before {
-      background: $brand;
+      background: $brand-light;
     }
   }
 
@@ -1549,7 +1512,7 @@ footer {
   .debate-block {
     margin-bottom: $line-height;
 
-    .debate-title a {
+    .brand-light a {
       color: $text;
     }
 
@@ -1697,7 +1660,7 @@ footer {
 }
 
 .legislation-list .legislation p {
-  word-break: break-all;
+  word-break: break-word;
 }
 
 // 6. Comments
@@ -1706,7 +1669,7 @@ footer {
 .comments {
 
   h3 {
-    border-bottom: 4px solid $brand;
+    border-bottom: 4px solid $title-border;
     color: $brand;
     display: table;
     font-size: $base-font-size;
@@ -1894,9 +1857,7 @@ footer {
 }
 
 .newsletter-body-content {
-
   li {
-    font-family: "Montserrat", sans-serif !important;
     font-size: $base-font-size;
   }
 
@@ -1915,8 +1876,19 @@ footer {
 // 8. Debates
 // --------------------
 
-.debate-new .header {
+.debate-new .header,
+.proposal-form .header,
+.budget-investment-new .header {
   background: $brand-secondary;
+  color: $text;
+
+  a {
+    color: inherit;
+  }
+
+  .header-icon {
+    color: #fff;
+  }
 
   &::before {
     background: $brand-secondary;
@@ -2210,7 +2182,7 @@ footer {
   }
 
   .tabs {
-    border-bottom: 4px solid $light;
+    border-bottom: 4px solid $title-border;
   }
 }
 
@@ -2296,7 +2268,7 @@ footer {
     position: relative;
 
     &::after {
-      border-bottom: 4px solid $brand;
+      border-bottom: 4px solid $title-border;
       bottom: -4px;
       content: "";
       left: 0;
@@ -2364,6 +2336,10 @@ footer {
   .row {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .column:only-child {
+    width: 100%;
   }
 
   .column:nth-child(odd),
@@ -2524,4 +2500,15 @@ footer {
     margin: 0;
     margin-bottom: $line-height / 2;
   }
+}
+
+// We need the !important to override the !important
+// set by gems/foundation-rails-6.6.1.0/vendor/assets/scss/typography/_base.scss
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: inherit !important;
 }

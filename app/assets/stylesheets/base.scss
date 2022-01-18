@@ -16,19 +16,6 @@
 
 // 0. Global styles
 // ------------------------------
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-a {
-  font-family: "Montserrat", sans-serif !important;
-}
-
 .button {
   min-height: $line-height * 2;
 }
@@ -518,37 +505,39 @@ header {
   box-shadow: 0 7px 0 $brand, 0 14px 0 $brand;
 }
 
+// This expands upon styles in layout.scss
 .subnavigation {
   background: $light;
   padding: $line-height / 2 0;
-}
 
-.subnavigation a {
-  color: $text;
-  position: relative;
+  a {
+    color: $text;
+    position: relative;
 
-  @include breakpoint(medium) {
+    @include breakpoint(medium) {
 
+      &.is-active {
+        border-bottom: 0;
+      }
+
+      &.is-active::after {
+        background: $brand;
+        bottom: -12px;
+        content: "";
+        height: 4px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    &:hover,
     &.is-active {
-      border-bottom: 0;
+      color: $brand;
     }
-
-    &.is-active::after {
-      background: $brand;
-      bottom: -12px;
-      content: "";
-      height: 4px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-    }
-  }
-
-  &:hover,
-  &.is-active {
-    color: $brand;
   }
 }
+
 
 .subnavigation ul li {
 

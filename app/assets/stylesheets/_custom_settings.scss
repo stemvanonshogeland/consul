@@ -4,10 +4,13 @@
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
 
+// Note: these styles can be overwritten by _custom_CLIENTNAME.scss
+
 $base-font-size:       18px;
 $border:            #cbc7c7;
 $brand:             #d3170e;
 $brand-secondary:   #0054ad;
+$brand-light:       lighten($brand, 20%);
 $dark:              #2d313b;
 $footer:            #c9d8ff;
 $highlight-soft:    #f0f3f6;
@@ -23,3 +26,4 @@ $link-hover:        $brand;
 $link-soft:         #a099a8;
 $text:              #000;
 $unlike:            #da262b;
+$title-border:      $brand;
