@@ -25,6 +25,8 @@
 // This expands upon styles in base.scss,
 // which expands upon styles in layout.scss
 
+@import "custom/headers";
+
 .input-group-button {
   button,
   .button {
