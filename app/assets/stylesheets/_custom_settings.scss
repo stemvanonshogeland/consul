@@ -8,22 +8,25 @@
 
 $base-font-size:       18px;
 $border:            #cbc7c7;
-$brand:             #d3170e;
-$brand-secondary:   #0054ad;
-$brand-light:       lighten($brand, 20%);
-$dark:              #2d313b;
+$brand:             #1bb7ba;
+$brand-secondary:   #ffcc00;
+$brand-light:       lighten($brand, 10%);
+$dark:              #000000;
 $footer:            #c9d8ff;
 $highlight-soft:    #f0f3f6;
 $highlight-text:    #8a9999;
 $hover:             darken($brand, 20%);
 $hover-secondary:   darken($brand-secondary, 20%);
-$info:              #4ab4f9;
+$info:              #59c3fe;
 $label:             #00469f;
 $light:             #f2f5f7;
 $like:              #21a562;
 $link-dark:         #493d57;
 $link-hover:        $brand;
 $link-soft:         #a099a8;
-$text:              #000;
+$text:              #000000;
 $unlike:            #da262b;
 $title-border:      $brand;
+
+$body-font-family: "Arial", sans-serif !important;
+$onshogeland-very-light-grey: #f3f3f3;
