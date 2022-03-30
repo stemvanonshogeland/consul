@@ -550,4 +550,30 @@ describe "Users" do
       end
     end
   end
+
+  describe "Notifications" do
+    scenario "Emails on comments are activated by default" do
+      visit new_user_registration_path
+
+      fill_in "Username", with: "CONSUL"
+      fill_in "Email", with: "user@consul.dev"
+      fill_in "Password", with: "12345678"
+      fill_in "Confirm password", with: "12345678"
+      check "By registering you accept the terms and conditions of use"
+      click_button "Register"
+
+      confirm_email
+
+      visit new_user_session_path
+
+      fill_in "Email or username", with: "CONSUL"
+      fill_in "Password", with: "12345678"
+      click_button "Enter"
+
+      click_link "My account"
+
+      expect(find_field("Notify me by email when someone comments on my proposals or debates")).to be_checked
+      expect(find_field("Notify me by email when someone replies to my comments")).to be_checked
+    end
+  end
 end
