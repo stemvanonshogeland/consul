@@ -273,6 +273,18 @@ h6,
 .custom-page .card {
   flex-grow: initial;
 
+  .gradient {
+    display: none;
+  }
+
+  figcaption h3  {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: rem-calc(4);
+    margin: $line-height / 2;
+    margin-left: 0;
+    padding: $line-height / 2;
+  }
+
   a {
     background: $brand-secondary;
   }
@@ -714,5 +726,16 @@ h6,
       flex-direction: column;
       justify-content: center;
     }
+  }
+}
+
+.budget-phases {
+
+  .budget-prev-phase,
+  .budget-next-phase,
+  .budget-prev-phase-disabled,
+  .budget-next-phase-disabled {
+    display: inline-block;
+    margin-bottom: rem-calc(36);
   }
 }
