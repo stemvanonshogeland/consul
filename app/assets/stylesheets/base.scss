@@ -644,7 +644,7 @@ body > header,
         display: block;
         position: absolute;
         right: -7px;
-        top: 22px;
+        top: 20px;
       }
 
       > a::after {
@@ -687,11 +687,6 @@ body > header,
   }
 }
 
-.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
-  border-top-color: transparent;
-  margin-top: -8px;
-}
-
 .top-bar {
 
   .avatar {
@@ -706,13 +701,9 @@ body > header,
 
     .avatar-image {
       position: absolute;
-      top: -4px;
+      top: -8px;
     }
   }
-}
-
-.public > .wrapper > header::after {
-  border-bottom: 0;
 }
 
 // 2. Homepage and custom pages
@@ -739,6 +730,11 @@ body > header,
         font-size: rem-calc(60);
       }
     }
+  }
+
+  .lead {
+    font-weight: bold;
+    margin: $line-height * 2 0;
   }
 
   h2,
@@ -1151,9 +1147,6 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: calc(#{$global-width / 2} - 50vw);
-    margin-right: calc(#{$global-width / 2} - 50vw);
-    overflow-x: hidden;
   }
 
   &.groups {
@@ -1323,25 +1316,6 @@ footer {
       top: 0;
       right: 6px;
     }
-  }
-}
-
-.admin-budgets-show {
-
-  button {
-    font-weight: normal;
-  }
-
-  .groups-and-headings .heading a {
-
-    &:hover {
-      transform: none;
-    }
-  }
-
-  .new-link {
-    border-width: 2px;
-    font-weight: bold;
   }
 }
 
@@ -1869,6 +1843,10 @@ footer {
 .draft-panels .comments-on .calc-comments .comments-box-container {
   margin-top: $line-height * 2;
   height: 100%;
+  position: relative;
+}
+
+.comments-box-container .comment-meta .comment-votes {
   position: relative;
 }
 
@@ -2871,7 +2849,7 @@ footer {
   }
 }
 
-.investments-list {
+.budget-investment-index-list {
   display: flex;
   flex-wrap: wrap;
 
@@ -2897,7 +2875,7 @@ footer {
 }
 
 .budget-info,
-.investments-list {
+.budget-investment-index-list {
 
   h2 {
     font-size: rem-calc(20);
@@ -3076,6 +3054,7 @@ footer {
 
 .budget-phases {
   background: $light;
+  border-top: 2px solid $border;
   padding-bottom: $line-height * 2;
 
   h2 {
@@ -3249,12 +3228,6 @@ footer {
     }
   }
 
-  .budget-phase {
-    @include breakpoint(medium) {
-      width: auto;
-    }
-  }
-
   .budget-prev-phase,
   .budget-next-phase,
   .budget-prev-phase-disabled,
@@ -3354,6 +3327,12 @@ footer {
   }
 }
 
+.my-ballot {
+  float: left;
+  font-size: rem-calc(40);
+  margin-right: 12px;
+}
+
 .supports-info {
 
   @include breakpoint(medium) {
@@ -3438,10 +3417,6 @@ footer {
   .orbit-previous {
     background: rgba(34, 34, 34, 0.25);
   }
-}
-
-.orbit-bullets button {
-  min-height: 0;
 }
 
 .sdg-related-list-selector {
