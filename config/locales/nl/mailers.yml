@@ -71,4 +71,6 @@ nl:
       thanks: "Dank u nogmaals voor uw deelname."
       sincerely: "Hoogachtend"
     evaluation_comment:
-      hi: Hoi
+      hi: "Hoi"
+      title: "Nieuw evaluatie commentaar voor %{investment}"
+      new_comment_by: "Er is een nieuw evaluatiecommentaar van <strong>%{commenter}</strong> op het idee %{investment}"

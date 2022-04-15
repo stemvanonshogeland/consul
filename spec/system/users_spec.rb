@@ -540,6 +540,8 @@ describe "Users" do
       fill_in "Password", with: "12345678"
       click_button "Enter"
 
+      visit root_path
+
       click_link "My account"
 
       expect(find_field("Notify me by email when someone comments on my proposals or debates")).to be_checked

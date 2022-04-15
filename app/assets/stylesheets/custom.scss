@@ -35,7 +35,10 @@ body {
     }
   }
 
-  .button, .button:focus, .budget.button {
+  .button,
+  .button:focus,
+  .budget.button,
+  .button.primary {
     font-weight: bold;
     box-shadow: none;
     background: $brand-secondary;
@@ -44,16 +47,6 @@ body {
     &:hover {
       background: #000;
       color: $brand-secondary;
-    }
-
-    &.primary {
-      background: #000;
-      color: $brand-secondary;
-
-      &:hover {
-        background: $brand-secondary;
-        color: #000;
-      }
     }
   }
 
@@ -151,6 +144,11 @@ h6,
 
     > a {
 
+      &:focus,
+      &[aria-selected="true"] {
+        background: none;
+      }
+
       &[aria-selected="true"]::after,
       .is-active::after {
         border-bottom: 4px solid $title-border;
@@ -167,6 +165,10 @@ h6,
 // --------------------
 
 .top-bar {
+
+  @include breakpoint(small only) {
+    padding: $line-height / 2 0;
+  }
 
   .subnavigation {
 
@@ -204,6 +206,32 @@ h6,
 
   .dropdown.menu > li {
 
+    a {
+      padding-left: $line-height / 2;
+      padding-right: $line-height;
+    }
+
+    &.opens-left > .is-dropdown-submenu {
+
+      @include breakpoint(small only) {
+        width: 100%;
+      }
+    }
+
+    &.is-dropdown-submenu-parent > a {
+
+      &::before {
+        right: 5px;
+        top: 20px;
+
+        @include breakpoint(small only) {
+          left: 70px;
+          right: auto;
+          top: 10px;
+        }
+      }
+    }
+
     &.is-active > a {
       color: #fff;
     }
@@ -231,6 +259,7 @@ h6,
     }
 
     .button {
+      margin-top: $line-height * 2;
       position: relative;
 
       &::after {
@@ -411,6 +440,13 @@ h6,
 
 .budget-phases {
 
+  .tabs-title {
+
+    &.current-phase-tab [aria-selected="true"] {
+      color: #000;
+    }
+  }
+
   .tabs-title > a {
 
     &:hover {
@@ -466,6 +502,26 @@ h6,
       top: 19px;
     }
   }
+
+  .budget-phase {
+
+    .main-link {
+      background: $brand-secondary;
+      color: #000;
+      font-weight: bold;
+    }
+  }
+}
+
+.budget-header {
+
+  h1 {
+    font-size: rem-calc(48);
+
+    @include breakpoint(medium) {
+      font-size: rem-calc(60);
+    }
+  }
 }
 
 .groups-and-headings .heading {
@@ -516,14 +572,6 @@ h6,
 
 // 5. Legislation
 // --------------------
-
-.legislation-content {
-  background: $light;
-}
-
-.legislation-process-list {
-  border-bottom: 2px solid $border;
-}
 
 .draft-panels .draft-allegation .draft-panel {
   color: $text;

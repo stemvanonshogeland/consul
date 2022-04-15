@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_03_110757) do
+ActiveRecord::Schema.define(version: 2022_03_28_211629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -333,6 +333,8 @@ ActiveRecord::Schema.define(version: 2022_02_03_110757) do
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.boolean "enabled", default: true
+    t.string "main_button_text"
+    t.string "main_button_url"
     t.index ["ends_at"], name: "index_budget_phases_on_ends_at"
     t.index ["kind"], name: "index_budget_phases_on_kind"
     t.index ["next_phase_id"], name: "index_budget_phases_on_next_phase_id"
@@ -398,7 +400,9 @@ ActiveRecord::Schema.define(version: 2022_02_03_110757) do
     t.text "description_publishing_prices"
     t.text "description_informing"
     t.string "voting_style", default: "knapsack"
-    t.boolean "published"
+    t.boolean "published", default: true
+    t.string "main_button_text"
+    t.string "main_button_url"
     t.boolean "hide_money", default: false
   end
 
