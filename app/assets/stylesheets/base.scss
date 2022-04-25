@@ -19,6 +19,11 @@
 // ------------------------------
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import "font-awesome/icons";
+
+html {
+  font-size: unset;
+}
 
 html {
   font-size: unset;
@@ -457,6 +462,8 @@ body > header,
 .wrapper > header {
   background: none;
   border-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .top-bar {
@@ -551,6 +558,10 @@ body > header,
       }
     }
   }
+
+  .menu {
+    padding-left: $line-height / 2;
+  }
 }
 
 .menu-icon {
@@ -574,6 +585,7 @@ body > header,
 
 .menu-button {
   color: $brand;
+  margin-left: $line-height / 4;
 }
 
 .subnavigation {
@@ -644,7 +656,7 @@ body > header,
         display: block;
         position: absolute;
         right: -7px;
-        top: 20px;
+        top: 22px;
       }
 
       > a::after {
@@ -687,6 +699,14 @@ body > header,
   }
 }
 
+.dropdown.menu > li {
+
+  &.is-dropdown-submenu-parent > a::after {
+    border-top-color: transparent;
+    margin-top: -8px;
+  }
+}
+
 .top-bar {
 
   .avatar {
@@ -701,9 +721,13 @@ body > header,
 
     .avatar-image {
       position: absolute;
-      top: -8px;
+      top: -4px;
     }
   }
+}
+
+.public > .wrapper > header::after {
+  border-bottom: 0;
 }
 
 // 2. Homepage and custom pages
@@ -719,6 +743,7 @@ body > header,
       background-position: 100% 30%;
       background-repeat: no-repeat;
       background-size: contain;
+      margin-right: calc(#{$global-width / 2} - 50vw);
       margin-top: $line-height * 2;
       min-height: $line-height * 20;
     }
@@ -730,11 +755,6 @@ body > header,
         font-size: rem-calc(60);
       }
     }
-  }
-
-  .lead {
-    font-weight: bold;
-    margin: $line-height * 2 0;
   }
 
   h2,
@@ -1147,6 +1167,12 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include breakpoint(large) {
+      margin-left: calc(#{$global-width / 2} - 50vw);
+      margin-right: calc(#{$global-width / 2} - 50vw);
+      overflow-x: hidden;
+    }
   }
 
   &.groups {
@@ -1251,7 +1277,7 @@ footer {
       }
 
       &:hover {
-       color: $white;
+        color: $white;
 
         &::after {
           border-left-color: $dark;
@@ -1316,6 +1342,25 @@ footer {
       top: 0;
       right: 6px;
     }
+  }
+}
+
+.admin-budgets-show {
+
+  button {
+    font-weight: normal;
+  }
+
+  .groups-and-headings .heading a {
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .new-link {
+    border-width: 2px;
+    font-weight: bold;
   }
 }
 
@@ -1846,6 +1891,18 @@ footer {
   position: relative;
 }
 
+.draft-panels .draft-allegation .calc-comments {
+
+  .comments-box-container {
+    top: rem-calc(100) !important;
+  }
+
+  .comment-box .comment-input {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 .comments-box-container .comment-meta .comment-votes {
   position: relative;
 }
@@ -2155,7 +2212,7 @@ footer {
     text-transform: uppercase;
 
     &::after {
-      border-bottom: 4px solid $border;
+      border-bottom: 4px solid $admin-border-color;
       content: "";
       margin-left: $line-height / 4;
       position: absolute;
@@ -2849,7 +2906,7 @@ footer {
   }
 }
 
-.budget-investment-index-list {
+.investments-list {
   display: flex;
   flex-wrap: wrap;
 
@@ -2875,7 +2932,7 @@ footer {
 }
 
 .budget-info,
-.budget-investment-index-list {
+.investments-list {
 
   h2 {
     font-size: rem-calc(20);
@@ -3054,7 +3111,6 @@ footer {
 
 .budget-phases {
   background: $light;
-  border-top: 2px solid $border;
   padding-bottom: $line-height * 2;
 
   h2 {
@@ -3197,7 +3253,6 @@ footer {
 
       &.current-phase {
         background: $brand-secondary;
-        background: red;
         color: #fff;
 
         &::after {
@@ -3225,6 +3280,12 @@ footer {
         left: 6px;
         top: 6px;
       }
+    }
+  }
+
+  .budget-phase {
+    @include breakpoint(medium) {
+      width: auto;
     }
   }
 
@@ -3327,12 +3388,6 @@ footer {
   }
 }
 
-.my-ballot {
-  float: left;
-  font-size: rem-calc(40);
-  margin-right: 12px;
-}
-
 .supports-info {
 
   @include breakpoint(medium) {
@@ -3417,6 +3472,10 @@ footer {
   .orbit-previous {
     background: rgba(34, 34, 34, 0.25);
   }
+}
+
+.orbit-bullets button {
+  min-height: 0;
 }
 
 .sdg-related-list-selector {
