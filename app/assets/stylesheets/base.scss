@@ -2197,6 +2197,22 @@ footer {
   min-width: 0;
 }
 
+.admin {
+
+  .top-links {
+    justify-content: right;
+
+    a {
+      flex-grow: unset;
+    }
+  }
+
+  .top-links .locale,
+  .top-bar h1 {
+    padding-left: $line-height / 2;
+  }
+}
+
 .ui-datepicker-calendar thead tr th {
   border: 1px solid $border;
 }
@@ -2811,6 +2827,10 @@ footer {
     margin: 0;
     margin-bottom: $line-height / 2;
   }
+}
+
+.verification button {
+  min-height: 0;
 }
 
 // 13. Custom
