@@ -35,12 +35,12 @@ nl:
       subject: "Iemand heeft gereageerd op je idee %{commentable}"
       title: "Iemand heeft gereageerd op je idee"
       hi: "Beste"
-      new_comment_by_html: "Er is een nieuwe reactie op je idee."
+      new_comment_by: "Er is een nieuwe reactie op je idee."
     reply:
       subject: "Iemand heeft gereageerd op jouw reactie"
       title: "Iemand heeft gereageerd op jouw reactie"
       hi: "Beste"
-      new_reply_by_html: "<strong>%{commenter}</strong> heeft gereageerd op jouw reactie"
+      new_reply_by: "<strong>%{commenter}</strong> heeft gereageerd op jouw reactie"
     direct_message_for_receiver:
       subject: "Je hebt een nieuw privébericht ontvangen"
       title: "Je hebt een nieuw privébericht ontvangen."
