@@ -166,8 +166,11 @@ h6,
 
 .top-bar {
 
-  @include breakpoint(small only) {
-    padding: $line-height / 2 0;
+  .top-bar-title a img {
+
+    @include breakpoint(small only) {
+      padding: $line-height / 2;
+    }
   }
 
   .subnavigation {
