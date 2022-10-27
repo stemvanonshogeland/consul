@@ -544,7 +544,7 @@ describe "Users" do
 
       click_link "My account"
 
-      expect(find_field("Notify me by email when someone comments on my proposals or debates")).to be_checked
+      expect(find_field("Notify me by email when someone comments on my contents")).to be_checked
       expect(find_field("Notify me by email when someone replies to my comments")).to be_checked
     end
   end
