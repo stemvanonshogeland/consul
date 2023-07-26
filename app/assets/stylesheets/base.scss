@@ -1202,8 +1202,12 @@ footer {
   }
 
   h1 {
-    font-size: rem-calc(60);
+    font-size: rem-calc(48);
     padding: $line-height * 2 0 $line-height;
+
+    @include breakpoint(medium) {
+      font-size: rem-calc(60);
+    }
   }
 
   h1,
@@ -2047,10 +2051,6 @@ a {
 }
 
 .draft-panels .draft-allegation .calc-comments {
-
-  .comments-box-container {
-    top: rem-calc(100) !important;
-  }
 
   .comment-box .comment-input {
     border-bottom: 0;
