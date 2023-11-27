@@ -2,6 +2,7 @@ en:
   budgets:
     investments:
       show:
+        title: "Title"
         edit: "Edit"
       new:
         recommendations_title: "Describe the idea. Think for example of:"
